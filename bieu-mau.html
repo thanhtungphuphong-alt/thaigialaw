@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hệ Thống Biểu Mẫu Pháp Lý Tham Khảo | THAIGIA LAW GROUP - Chi Nhánh Phù Cát</title>
+  <meta name="description" content="Kho biểu mẫu đơn pháp lý tham khảo chuẩn mực theo quy định hiện hành: đơn khởi kiện đất đai, ly hôn, di chúc thừa kế, hợp đồng đặt cọc. Xem trực tuyến độc quyền tại HAU LAW GROUP." />
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans (Hỗ trợ tiếng Việt đầy đủ) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              DEFAULT: '#7F1D1D',
+              900: '#450a0a',
+              800: '#7F1D1D',
+              700: '#991b1b',
+              600: '#b91c1c',
+              50:  '#fef2f2',
+              100: '#fee2e2',
+            },
+            gold: {
+              DEFAULT: '#D4AF37',
+              light:   '#F3E5AB',
+              muted:   '#C5A880',
+              dark:    '#AA820A',
+            },
+            pearl: '#F8FAFC',
+          },
+          fontFamily: {
+            serif:    ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:     ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ── Base ── */
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FFFFFF;
+      color: #1E293B;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* ── Gold gradient text & lines ── */
+    .text-gold-grad {
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA820A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-burgundy-grad {
+      background: linear-gradient(135deg, #b91c1c 0%, #7F1D1D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gold-line {
+      width: 54px; height: 2px;
+      background: linear-gradient(90deg, #D4AF37, #F3E5AB, #D4AF37);
+      border-radius: 9999px;
+    }
+    .gold-line-full {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    }
+
+    /* ── Sticky Nav ── */
+    #navbar { transition: background .3s, box-shadow .3s; }
+    #navbar.scrolled {
+      background-color: rgba(255,255,255,.98) !important;
+      box-shadow: 0 4px 20px rgba(127,29,29,.08);
+    }
+
+    /* ── Filter Tabs ── */
+    .filter-tab-form {
+      transition: all .25s ease;
+    }
+    .filter-tab-form.active {
+      background-color: #7F1D1D !important;
+      color: #FFFFFF !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 14px rgba(127,29,29,0.22);
+    }
+
+    /* ── Form Card ── */
+    .form-card {
+      border: 1px solid #ebdcb2;
+      border-radius: 10px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 10px rgba(127,29,29,.04);
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+    }
+    .form-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(127,29,29,.12);
+      border-color: #D4AF37;
+    }
+
+    /* ── Anti-Copy Paper Modal ── */
+    .paper-preview {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      background: #FFFFFF;
+      position: relative;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+      border: 1px solid #E2E8F0;
+    }
+
+    /* ── Watermark Background ── */
+    .watermark-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      overflow: hidden;
+      z-index: 10;
+      padding: 60px 0;
+    }
+    .watermark-text {
+      transform: rotate(-28deg);
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: rgba(127,29,29, 0.08);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    /* ── Floating Buttons ── */
+    .float-btn {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(0,0,0,.22);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .float-btn:hover { transform: scale(1.12); box-shadow: 0 8px 26px rgba(0,0,0,.3); }
+
+    .pulse-ring {
+      position: absolute; inset: -4px;
+      border-radius: 50%;
+      border: 2px solid;
+      animation: pulse-out 2.2s ease-out infinite;
+    }
+    @keyframes pulse-out {
+      0%   { opacity: .65; transform: scale(1); }
+      100% { opacity: 0;   transform: scale(1.65); }
+    }
+
+    /* Mobile nav */
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height .35s ease-in-out; }
+    #mobile-menu.open { max-height: 480px; }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #F8FAFC; }
+    ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HEADER & MENU ĐIỀU HƯỚNG
+═══════════════════════════════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-gold/25">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo Brand -->
+      <a href="index.html" class="flex items-center gap-3.5 flex-shrink-0" aria-label="Trang chủ Thái Gia Law">
+        <div class="logo-wrap flex-shrink-0" title="Thay thế logo.png tại đây">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="23" cy="23" r="22" fill="#7F1D1D" stroke="#D4AF37" stroke-width="1.5"/>
+            <path d="M23 8 L34 13 L34 23 C34 29.5 28.5 34.5 23 37 C17.5 34.5 12 29.5 12 23 L12 13 Z"
+                  fill="none" stroke="#D4AF37" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M23 11.5 L31.5 15.5 L31.5 23 C31.5 28.2 27.5 32.5 23 34.5 C18.5 32.5 14.5 28.2 14.5 23 L14.5 15.5 Z"
+                  fill="rgba(212,175,55,0.08)"/>
+            <line x1="23" y1="18" x2="23" y2="28" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="17" y1="20" x2="29" y2="20" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M15 20 C14 21.5 14 23 15 24 L19 24 C20 23 20 21.5 19 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+            <path d="M27 20 C26 21.5 26 23 27 24 L31 24 C32 23 32 21.5 31 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+          </svg>
+        </div>
+
+        <div class="leading-tight">
+          <p class="font-serif font-bold text-burgundy text-sm sm:text-[15px] tracking-wide uppercase">
+            THAIGIA LAW
+          </p>
+          <p class="text-slate-500 text-[9.5px] tracking-wider uppercase font-semibold">
+            Chi Nhánh Phù Cát
+          </p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex items-center gap-7 text-[.84rem] font-medium text-slate-700">
+        <li><a href="index.html" class="hover:text-burgundy transition-colors pb-1">Trang Chủ</a></li>
+        <li><a href="ban-tin.html" class="hover:text-burgundy transition-colors pb-1">Bản Tin Pháp Luật</a></li>
+        <li><a href="bieu-mau.html" class="text-burgundy font-semibold border-b-2 border-burgundy pb-1">Biểu Mẫu Tham Khảo</a></li>
+        <li><a href="lien-he.html" class="hover:text-burgundy transition-colors pb-1">Liên Hệ</a></li>
+      </ul>
+
+      <!-- CTA & Hotline -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:0987654321" class="flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-burgundy transition-colors">
+          <div class="w-7 h-7 rounded-full bg-burgundy-50 border border-burgundy/20 flex items-center justify-center text-burgundy text-xs">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <span>0987 654 321</span>
+        </a>
+        <a href="lien-he.html"
+           class="px-5 py-2.5 rounded-full bg-burgundy text-white font-semibold text-[.82rem] hover:bg-burgundy-700 transition shadow-md shadow-burgundy/20 border border-gold/30 flex items-center gap-1.5">
+          <i class="fa-solid fa-calendar-check text-gold text-xs"></i> Tư Vấn Ngay
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Mobile -->
+      <button id="menu-btn" class="lg:hidden text-burgundy hover:text-burgundy-700 focus:outline-none p-2" aria-label="Menu">
+        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="lg:hidden border-t border-gold/20">
+      <ul class="flex flex-col py-4 gap-1 text-sm font-medium text-slate-700">
+        <li><a href="index.html" class="block px-3 py-2 hover:text-burgundy rounded-lg">Trang Chủ</a></li>
+        <li><a href="ban-tin.html" class="block px-3 py-2 hover:text-burgundy rounded-lg">Bản Tin Pháp Luật</a></li>
+        <li><a href="bieu-mau.html" class="block px-3 py-2 text-burgundy font-semibold rounded-lg bg-burgundy-50">Biểu Mẫu Tham Khảo</a></li>
+        <li><a href="lien-he.html" class="block px-3 py-2 hover:text-burgundy rounded-lg">Liên Hệ</a></li>
+        <li class="pt-3 border-t border-slate-100 flex flex-col gap-2 mt-2">
+          <a href="tel:0987654321" class="flex items-center justify-center gap-2 py-2 text-sm font-semibold text-burgundy bg-burgundy-50 rounded-lg">
+            <i class="fa-solid fa-phone"></i> Hotline: 0987 654 321
+          </a>
+          <a href="lien-he.html" class="py-2.5 text-center rounded-lg bg-burgundy text-white font-semibold text-sm border border-gold/30">
+            Tư Vấn Ngay
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     BANNER TIÊU ĐỀ KHO BIỂU MẪU
+═══════════════════════════════════════════════════════════════ -->
+<header class="pt-24 pb-12 md:pt-28 md:pb-16 px-4 bg-gradient-to-b from-burgundy via-burgundy-800 to-burgundy-900 text-white relative overflow-hidden border-b border-gold/30">
+  <div class="absolute inset-0 opacity-5" style="background-image:repeating-linear-gradient(45deg,#D4AF37 0,#D4AF37 1px,transparent 0,transparent 50%);background-size:24px 24px;"></div>
+  <div class="max-w-4xl mx-auto w-full text-center relative z-10">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold/40 bg-gold/15 text-gold-light text-xs font-bold uppercase tracking-wider mb-4">
+      <i class="fa-solid fa-lock text-[10px]"></i> Tra cứu trực tuyến nội bộ
+    </div>
+    <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 tracking-wide uppercase text-white whitespace-nowrap">
+      HỆ THỐNG BIỂU MẪU <span class="text-[#D4AF37]">PHÁP LÝ THAM KHẢO</span>
+    </h1>
+    <p class="text-red-100/80 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+      Văn bản định khung tham khảo chuẩn mực theo quy định hiện hành. Hệ thống hỗ trợ xem trực tuyến, không hỗ trợ sao chép hoặc tải về.
+    </p>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     BỘ LỌC TABS & LƯỚI 6 BIỂU MẪU
+═══════════════════════════════════════════════════════════════ -->
+<main class="py-16 px-4 bg-pearl min-h-screen">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Notice Box: Xem trực tuyến không cho tải về -->
+    <div class="max-w-4xl mx-auto mb-10 p-4 rounded-xl bg-amber-50 border border-gold/40 text-amber-900 flex items-start gap-3.5 shadow-sm text-xs sm:text-sm">
+      <i class="fa-solid fa-circle-exclamation text-amber-700 text-lg flex-shrink-0 mt-0.5"></i>
+      <div class="leading-relaxed">
+        <strong>Lưu ý bản quyền &amp; an toàn pháp lý:</strong> Các biểu mẫu dưới đây được số hóa nhằm mục đích tham khảo cấu trúc định khung chuẩn theo Nghị quyết HĐTP và Bộ luật hiện hành. Để tránh các sai sót làm Tòa án trả đơn hoặc mất quyền lợi tố tụng, hệ thống <strong>chỉ cho phép xem trực tuyến, không cho sao chép hoặc tải về</strong>. Vui lòng liên hệ trực tiếp Luật sư để được hỗ trợ soạn thảo chuẩn theo hồ sơ thực tế.
+      </div>
+    </div>
+
+    <!-- Tabs Filter JS -->
+    <div class="flex flex-wrap justify-center gap-2.5 mb-12">
+      <button type="button" onclick="filterForms('all', this)"
+              class="filter-tab-form active px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Tất Cả
+      </button>
+      <button type="button" onclick="filterForms('khoi-kien', this)"
+              class="filter-tab-form px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Đơn Khởi Kiện
+      </button>
+      <button type="button" onclick="filterForms('hon-nhan', this)"
+              class="filter-tab-form px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Hôn Nhân
+      </button>
+      <button type="button" onclick="filterForms('thua-ke', this)"
+              class="filter-tab-form px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Thừa Kế
+      </button>
+      <button type="button" onclick="filterForms('hop-dong', this)"
+              class="filter-tab-form px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Hợp Đồng
+      </button>
+      <button type="button" onclick="filterForms('khieu-nai', this)"
+              class="filter-tab-form px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Khiếu Nại
+      </button>
+    </div>
+
+    <!-- Grid 6 Biểu mẫu -->
+    <div id="forms-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Mẫu 1: Đơn khởi kiện tranh chấp đất đai -->
+      <div class="form-item form-card p-6 flex flex-col justify-between" data-category="khoi-kien">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-burgundy/10 text-burgundy text-[11px] font-bold border border-burgundy/20">
+              <i class="fa-solid fa-lock text-[9px]"></i> Văn bản tham khảo nội bộ
+            </span>
+            <span class="text-xs font-mono font-semibold text-slate-400">BM-DD01</span>
+          </div>
+          <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 mb-2 leading-snug">
+            Đơn khởi kiện tranh chấp quyền sử dụng đất
+          </h2>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Khung đơn chuẩn hóa theo Mẫu số 23-DS (NQ 01/2017/NQ-HĐTP) yêu cầu giải quyết ranh giới mốc giới, lấn chiếm hoặc hủy quyết định cấp sổ sai đối tượng.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+          <button type="button" onclick="openFormModal('BM-DD01')" class="w-full py-2.5 px-4 rounded-lg bg-burgundy text-white font-semibold text-xs hover:bg-burgundy-700 transition flex items-center justify-center gap-2 shadow-sm border border-gold/30">
+            <i class="fa-solid fa-eye text-gold"></i> Xem trước mẫu đơn
+          </button>
+          <a href="lien-he.html"
+             class="w-full py-2 px-3 rounded-lg border border-gold/60 text-burgundy hover:bg-gold/10 font-medium text-xs text-center transition flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-user-shield text-gold"></i> Nhờ Luật sư hỗ trợ hoàn thiện đơn
+          </a>
+        </div>
+      </div>
+
+      <!-- Mẫu 2: Đơn ly hôn thuận tình / đơn phương -->
+      <div class="form-item form-card p-6 flex flex-col justify-between" data-category="hon-nhan">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-burgundy/10 text-burgundy text-[11px] font-bold border border-burgundy/20">
+              <i class="fa-solid fa-lock text-[9px]"></i> Văn bản tham khảo nội bộ
+            </span>
+            <span class="text-xs font-mono font-semibold text-slate-400">BM-HN02</span>
+          </div>
+          <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 mb-2 leading-snug">
+            Đơn yêu cầu công nhận thuận tình ly hôn
+          </h2>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Định khung thỏa thuận hôn nhân, quyền trực tiếp nuôi con, mức cấp dưỡng hàng tháng và phân chia tài sản chung, công nợ chung vợ chồng.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+          <button type="button" onclick="openFormModal('BM-HN02')" class="w-full py-2.5 px-4 rounded-lg bg-burgundy text-white font-semibold text-xs hover:bg-burgundy-700 transition flex items-center justify-center gap-2 shadow-sm border border-gold/30">
+            <i class="fa-solid fa-eye text-gold"></i> Xem trước mẫu đơn
+          </button>
+          <a href="lien-he.html"
+             class="w-full py-2 px-3 rounded-lg border border-gold/60 text-burgundy hover:bg-gold/10 font-medium text-xs text-center transition flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-user-shield text-gold"></i> Nhờ Luật sư hỗ trợ hoàn thiện đơn
+          </a>
+        </div>
+      </div>
+
+      <!-- Mẫu 3: Văn bản thỏa thuận chia thừa kế -->
+      <div class="form-item form-card p-6 flex flex-col justify-between" data-category="thua-ke">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-burgundy/10 text-burgundy text-[11px] font-bold border border-burgundy/20">
+              <i class="fa-solid fa-lock text-[9px]"></i> Văn bản tham khảo nội bộ
+            </span>
+            <span class="text-xs font-mono font-semibold text-slate-400">BM-TK03</span>
+          </div>
+          <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 mb-2 leading-snug">
+            Văn bản thỏa thuận phân chia di sản thừa kế
+          </h2>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Mẫu văn bản công chứng dùng cho các đồng thừa kế tự nguyện thỏa thuận sang tên toàn bộ nhà đất cho một người hoặc phân chia theo tỷ lệ hợp pháp.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+          <button type="button" onclick="openFormModal('BM-TK03')" class="w-full py-2.5 px-4 rounded-lg bg-burgundy text-white font-semibold text-xs hover:bg-burgundy-700 transition flex items-center justify-center gap-2 shadow-sm border border-gold/30">
+            <i class="fa-solid fa-eye text-gold"></i> Xem trước mẫu đơn
+          </button>
+          <a href="lien-he.html"
+             class="w-full py-2 px-3 rounded-lg border border-gold/60 text-burgundy hover:bg-gold/10 font-medium text-xs text-center transition flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-user-shield text-gold"></i> Nhờ Luật sư hỗ trợ hoàn thiện đơn
+          </a>
+        </div>
+      </div>
+
+      <!-- Mẫu 4: Hợp đồng đặt cọc chuyển nhượng đất -->
+      <div class="form-item form-card p-6 flex flex-col justify-between" data-category="hop-dong">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-burgundy/10 text-burgundy text-[11px] font-bold border border-burgundy/20">
+              <i class="fa-solid fa-lock text-[9px]"></i> Văn bản tham khảo nội bộ
+            </span>
+            <span class="text-xs font-mono font-semibold text-slate-400">BM-HD04</span>
+          </div>
+          <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 mb-2 leading-snug">
+            Hợp đồng đặt cọc mua bán bất động sản
+          </h2>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Điều khoản bảo vệ nghiêm ngặt: cam kết tài sản không dính quy hoạch, không kê biên, trách nhiệm thuế phí và chế tài phạt cọc gấp 2 lần.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+          <button type="button" onclick="openFormModal('BM-HD04')" class="w-full py-2.5 px-4 rounded-lg bg-burgundy text-white font-semibold text-xs hover:bg-burgundy-700 transition flex items-center justify-center gap-2 shadow-sm border border-gold/30">
+            <i class="fa-solid fa-eye text-gold"></i> Xem trước mẫu đơn
+          </button>
+          <a href="lien-he.html"
+             class="w-full py-2 px-3 rounded-lg border border-gold/60 text-burgundy hover:bg-gold/10 font-medium text-xs text-center transition flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-user-shield text-gold"></i> Nhờ Luật sư hỗ trợ hoàn thiện đơn
+          </a>
+        </div>
+      </div>
+
+      <!-- Mẫu 5: Đơn khiếu nại hành chính thu hồi đất -->
+      <div class="form-item form-card p-6 flex flex-col justify-between" data-category="khieu-nai">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-burgundy/10 text-burgundy text-[11px] font-bold border border-burgundy/20">
+              <i class="fa-solid fa-lock text-[9px]"></i> Văn bản tham khảo nội bộ
+            </span>
+            <span class="text-xs font-mono font-semibold text-slate-400">BM-HC05</span>
+          </div>
+          <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 mb-2 leading-snug">
+            Đơn khiếu nại quyết định bồi thường, thu hồi đất
+          </h2>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Gửi Chủ tịch UBND cấp huyện yêu cầu điều chỉnh đơn giá bồi thường đất ở, kiểm đếm bổ sung tài sản cây cối trên đất và giao đất tái định cư.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+          <button type="button" onclick="openFormModal('BM-HC05')" class="w-full py-2.5 px-4 rounded-lg bg-burgundy text-white font-semibold text-xs hover:bg-burgundy-700 transition flex items-center justify-center gap-2 shadow-sm border border-gold/30">
+            <i class="fa-solid fa-eye text-gold"></i> Xem trước mẫu đơn
+          </button>
+          <a href="lien-he.html"
+             class="w-full py-2 px-3 rounded-lg border border-gold/60 text-burgundy hover:bg-gold/10 font-medium text-xs text-center transition flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-user-shield text-gold"></i> Nhờ Luật sư hỗ trợ hoàn thiện đơn
+          </a>
+        </div>
+      </div>
+
+      <!-- Mẫu 6: Đơn yêu cầu cấp dưỡng và nuôi con -->
+      <div class="form-item form-card p-6 flex flex-col justify-between" data-category="hon-nhan">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-burgundy/10 text-burgundy text-[11px] font-bold border border-burgundy/20">
+              <i class="fa-solid fa-lock text-[9px]"></i> Văn bản tham khảo nội bộ
+            </span>
+            <span class="text-xs font-mono font-semibold text-slate-400">BM-HN06</span>
+          </div>
+          <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 mb-2 leading-snug">
+            Đơn yêu cầu thay đổi người nuôi con &amp; cấp dưỡng
+          </h2>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Áp dụng sau ly hôn khi bên nuôi con không còn đủ điều kiện chăm sóc, bạo hành hoặc bên có nghĩa vụ cấp dưỡng trốn tránh trách nhiệm tài chính.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+          <button type="button" onclick="openFormModal('BM-HN06')" class="w-full py-2.5 px-4 rounded-lg bg-burgundy text-white font-semibold text-xs hover:bg-burgundy-700 transition flex items-center justify-center gap-2 shadow-sm border border-gold/30">
+            <i class="fa-solid fa-eye text-gold"></i> Xem trước mẫu đơn
+          </button>
+          <a href="lien-he.html"
+             class="w-full py-2 px-3 rounded-lg border border-gold/60 text-burgundy hover:bg-gold/10 font-medium text-xs text-center transition flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-user-shield text-gold"></i> Nhờ Luật sư hỗ trợ hoàn thiện đơn
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     POPUP PREVIEW MẪU ĐƠN (ANTI-COPY + WATERMARK)
+═══════════════════════════════════════════════════════════════ -->
+<div id="form-preview-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-5 select-none" oncontextmenu="return false;">
+  <div class="bg-white rounded-2xl border-2 border-gold/40 max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden animate-fadeIn">
+
+    <!-- Modal Header: Hiển thị tên biểu mẫu đang xem (chữ in hoa, màu đỏ trầm #7F1D1D) kèm nút đóng (X) -->
+    <div class="px-6 py-4 bg-[#FCFBF9] border-b border-gold/30 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full bg-burgundy-50 border border-gold/40 flex items-center justify-center text-burgundy text-sm">
+          <i class="fa-solid fa-file-contract"></i>
+        </div>
+        <div>
+          <h3 class="font-serif text-sm sm:text-base font-bold text-[#7F1D1D] tracking-wide uppercase" id="preview-modal-name">
+            XEM TRƯỚC BIỂU MẪU ĐỊNH KHUNG
+          </h3>
+          <p class="text-[11px] text-slate-500 font-sans">Văn bản hành chính tư pháp chuẩn · Khóa sao chép tài liệu</p>
+        </div>
+      </div>
+      <button type="button" onclick="closeFormModal()" class="text-slate-400 hover:text-[#7F1D1D] text-2xl font-bold focus:outline-none p-1 transition" aria-label="Đóng popup">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Modal Body: Khung xem văn bản mô phỏng A4 với Watermark & Chặn Copy -->
+    <div class="p-4 sm:p-8 overflow-y-auto flex-1 bg-slate-100/90 select-none" oncontextmenu="return false;">
+      <div id="paper-doc" class="paper-preview p-6 sm:p-12 rounded-lg max-w-2xl mx-auto font-serif relative bg-white shadow-xl border border-slate-200 select-none"
+           oncontextmenu="return false;"
+           ondragstart="return false;"
+           onselectstart="return false;">
+
+        <!-- Watermark Overlay: "HAU LAW GROUP - TÀI LIỆU THAM KHẢO" chạy chéo nền văn bản -->
+        <div class="watermark-overlay select-none" aria-hidden="true">
+          <div class="watermark-text">HAU LAW GROUP - TÀI LIỆU THAM KHẢO</div>
+          <div class="watermark-text">HAU LAW GROUP - TÀI LIỆU THAM KHẢO</div>
+        </div>
+
+        <!-- Quốc hiệu tiêu ngữ -->
+        <div class="text-center mb-6 leading-tight relative z-20">
+          <p class="font-bold text-xs uppercase tracking-wider text-slate-900 font-serif">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+          <p class="font-bold text-xs text-slate-800 font-serif mt-1">Độc lập – Tự do – Hạnh phúc</p>
+          <div class="w-28 h-[1px] bg-slate-700 mx-auto mt-2"></div>
+        </div>
+
+        <!-- Địa điểm ngày tháng -->
+        <div class="text-right text-xs italic text-slate-500 mb-6 relative z-20 font-sans">
+          ..., ngày... tháng... năm 202...
+        </div>
+
+        <!-- Tên Đơn / Biểu mẫu -->
+        <div class="text-center my-5 relative z-20">
+          <h4 id="preview-title" class="font-serif font-bold text-base sm:text-lg text-[#7F1D1D] uppercase tracking-wide"></h4>
+          <p id="preview-sub-standard" class="text-[11px] italic text-slate-500 font-sans mt-1"></p>
+        </div>
+
+        <!-- Kính gửi -->
+        <div class="mb-4 relative z-20 text-xs sm:text-sm font-sans">
+          <p class="font-bold text-slate-900">Kính gửi: <span id="preview-recipient" class="font-semibold text-slate-800"></span></p>
+        </div>
+
+        <!-- Các bên tham gia / Đương sự -->
+        <div id="preview-parties" class="relative z-20 font-sans text-xs sm:text-sm leading-relaxed text-slate-700 py-3 border-y border-slate-100 mb-4 whitespace-pre-line"></div>
+
+        <!-- Nội dung khởi kiện / Yêu cầu -->
+        <div class="relative z-20 font-sans text-xs sm:text-sm leading-relaxed text-slate-800 py-2 whitespace-pre-line" id="preview-content"></div>
+
+        <!-- Danh mục tài liệu chứng cứ -->
+        <div id="preview-evidences-box" class="relative z-20 font-sans text-xs sm:text-sm leading-relaxed text-slate-700 py-3 mt-4 border-t border-dashed border-slate-200 whitespace-pre-line"></div>
+
+        <!-- Phần Ký tên -->
+        <div class="mt-8 pt-4 flex justify-end relative z-20 font-sans text-xs sm:text-sm">
+          <div class="text-center w-56">
+            <p id="preview-signer-title" class="font-bold text-slate-900 uppercase">NGƯỜI LÀM ĐƠN</p>
+            <p class="italic text-[11px] text-slate-400 mt-1">(Ký và ghi rõ họ tên)</p>
+            <div class="h-16"></div>
+            <p class="italic text-[11px] text-slate-300">[Chữ ký / Điểm chỉ]</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Modal Footer: Thông báo lưu ý & Nút "Liên hệ Luật sư hỗ trợ" dẫn sang lien-he.html -->
+    <div class="p-4 sm:p-5 bg-white border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <div class="text-slate-600 text-center sm:text-left flex items-start sm:items-center gap-2">
+        <i class="fa-solid fa-circle-exclamation text-amber-600 text-sm mt-0.5 sm:mt-0 flex-shrink-0"></i>
+        <span class="leading-relaxed">
+          <strong class="text-slate-800">Lưu ý:</strong> Mẫu văn bản mang tính định khung tham khảo. Quý khách vui lòng liên hệ Luật sư để được rà soát chứng cứ và hoàn thiện hồ sơ chuẩn xác.
+        </span>
+      </div>
+      <div class="flex items-center gap-2.5 flex-shrink-0 w-full sm:w-auto justify-end">
+        <a href="lien-he.html"
+           class="w-full sm:w-auto px-5 py-2.5 rounded-full bg-[#7F1D1D] text-white font-semibold hover:bg-burgundy-700 transition border border-gold/40 shadow-sm flex items-center justify-center gap-2">
+          <i class="fa-solid fa-headset text-gold"></i>
+          Liên Hệ Luật Sư Hỗ Trợ
+        </a>
+        <button type="button" onclick="closeFormModal()" class="w-full sm:w-auto px-4 py-2.5 rounded-full bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200 transition">
+          Đóng
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer class="bg-gradient-to-b from-[#4A0E17] via-[#3E0B13] to-[#30080E] border-t-2 border-[#D4AF37]/35 pt-16 pb-8 px-4 text-[#E2E8F0] relative overflow-hidden">
+    <!-- Watermark Logo khiên cán cân ẩn chìm dưới nền Footer -->
+  <div class="absolute right-[-40px] sm:right-4 md:right-[15%] lg:right-[20%] top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 opacity-[0.07] flex items-center justify-center" aria-hidden="true">
+    <svg width="480" height="480" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] md:w-[480px] md:h-[480px]">
+      <circle cx="23" cy="23" r="22" stroke="#D4AF37" stroke-width="1.2"/>
+      <path d="M23 8 L34 13 L34 23 C34 29.5 28.5 34.5 23 37 C17.5 34.5 12 29.5 12 23 L12 13 Z"
+            fill="none" stroke="#D4AF37" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M23 11.5 L31.5 15.5 L31.5 23 C31.5 28.2 27.5 32.5 23 34.5 C18.5 32.5 14.5 28.2 14.5 23 L14.5 15.5 Z"
+            fill="#D4AF37" fill-opacity="0.25"/>
+      <line x1="23" y1="18" x2="23" y2="28" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="17" y1="20" x2="29" y2="20" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M15 20 C14 21.5 14 23 15 24 L19 24 C20 23 20 21.5 19 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+      <path d="M27 20 C26 21.5 26 23 27 24 L31 24 C32 23 32 21.5 31 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 mb-12">
+
+      <!-- Cột 1: Thương hiệu & Tôn chỉ (md:col-span-5) -->
+      <div class="md:col-span-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3.5 mb-4">
+            <svg width="44" height="44" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+              <circle cx="23" cy="23" r="22" fill="#7F1D1D" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M23 8 L34 13 L34 23 C34 29.5 28.5 34.5 23 37 C17.5 34.5 12 29.5 12 23 L12 13 Z"
+                    fill="none" stroke="#D4AF37" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M23 11.5 L31.5 15.5 L31.5 23 C31.5 28.2 27.5 32.5 23 34.5 C18.5 32.5 14.5 28.2 14.5 23 L14.5 15.5 Z"
+                    fill="rgba(212,175,55,0.12)"/>
+              <line x1="23" y1="18" x2="23" y2="28" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="17" y1="20" x2="29" y2="20" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M15 20 C14 21.5 14 23 15 24 L19 24 C20 23 20 21.5 19 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+              <path d="M27 20 C26 21.5 26 23 27 24 L31 24 C32 23 32 21.5 31 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+            </svg>
+            <div>
+              <p class="font-serif font-bold text-[#D4AF37] text-base tracking-wider uppercase">THAIGIA LAW</p>
+              <p class="text-red-200/85 text-[10px] tracking-widest uppercase">Chi Nhánh Phù Cát – HAU LAW GROUP</p>
+            </div>
+          </div>
+
+          <p class="text-[#E2E8F0] text-sm leading-relaxed mb-4 max-w-md">
+            <strong class="text-white font-semibold">CÔNG TY LUẬT TNHH THÁI GIA – CHI NHÁNH PHÙ CÁT</strong>.
+            Cung cấp giải pháp pháp lý toàn diện, thực chiến và bảo vệ tối đa quyền lợi chính đáng cho người dân và doanh nghiệp.
+          </p>
+
+          <p class="font-serif italic text-sm text-[#D4AF37] mb-5 tracking-wide flex items-center gap-2">
+            <i class="fa-solid fa-scale-balanced text-xs opacity-80"></i>
+            <span>« Tận Tâm – Chính Trực – Thực Chiến – Hiệu Quả »</span>
+          </p>
+        </div>
+
+        <!-- Mạng xã hội -->
+        <div class="flex items-center gap-3 pt-2">
+          <a href="#" class="w-9 h-9 rounded-full bg-[#5B1313]/70 border border-[#D4AF37]/40 text-[#F1F5F9] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#4A0E17] hover:border-[#D4AF37] hover:scale-110 transition-all text-xs shadow-md" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-[#5B1313]/70 border border-[#D4AF37]/40 text-[#F1F5F9] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#4A0E17] hover:border-[#D4AF37] hover:scale-110 transition-all text-xs shadow-md" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-[#5B1313]/70 border border-[#D4AF37]/40 text-[#F1F5F9] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#4A0E17] hover:border-[#D4AF37] hover:scale-110 transition-all text-xs shadow-md" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cột 2: Trang chính (md:col-span-3) -->
+      <div class="md:col-span-3">
+        <h4 class="font-serif font-bold text-[#D4AF37] mb-5 text-sm tracking-wider uppercase flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+          TRANG CHÍNH
+        </h4>
+        <ul class="space-y-3 text-sm text-[#F1F5F9]">
+          <li>
+            <a href="index.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Trang Chủ
+            </a>
+          </li>
+          <li>
+            <a href="ban-tin.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Bản Tin Pháp Luật
+            </a>
+          </li>
+          <li>
+            <a href="bieu-mau.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Biểu Mẫu Tham Khảo
+            </a>
+          </li>
+          <li>
+            <a href="lien-he.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Liên Hệ Trực Tiếp
+            </a>
+          </li>
+          <li>
+            <a href="lien-he.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Đặt Lịch Tư Vấn
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Cột 3: Thông tin chi nhánh (md:col-span-4) -->
+      <div class="md:col-span-4">
+        <h4 class="font-serif font-bold text-[#D4AF37] mb-5 text-sm tracking-wider uppercase flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+          THÔNG TIN CHI NHÁNH
+        </h4>
+        <ul class="space-y-3.5 text-sm text-[#F1F5F9]">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-[#D4AF37] text-sm mt-1 flex-shrink-0"></i>
+            <span>Huyện Phù Cát, Tỉnh Bình Định</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-[#D4AF37] text-sm flex-shrink-0"></i>
+            <a href="tel:0987654321" class="hover:text-[#D4AF37] transition-colors font-medium">
+              Hotline: 0987 654 321
+            </a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-envelope text-[#D4AF37] text-sm flex-shrink-0"></i>
+            <a href="mailto:info@thaigialaw.vn" class="hover:text-[#D4AF37] transition-colors">
+              info@thaigialaw.vn
+            </a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-clock text-[#D4AF37] text-sm mt-1 flex-shrink-0"></i>
+            <div>
+              <p>Thứ 2 – Thứ 7: 07:30 – 17:30</p>
+              <p class="text-red-200/80 text-xs mt-0.5">Chủ nhật: Tiếp nhận theo lịch hẹn trước</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Dải phân cách & Bản quyền dưới đáy -->
+    <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent mb-6"></div>
+    <div class="text-center text-xs text-red-200/75 py-1">
+      <p>© 2026 CÔNG TY LUẬT TNHH THÁI GIA – CHI NHÁNH PHÙ CÁT (HAU LAW GROUP). All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TIỆN ÍCH NỔI (ZALO + HOTLINE)
+═══════════════════════════════════════════════════════════════ -->
+<div class="fixed bottom-6 right-5 z-50 flex flex-col items-center gap-3">
+
+  <!-- Zalo Floating Button -->
+  <div class="relative group">
+    <a href="https://zalo.me/0905000000" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo với Luật sư"
+       class="w-14 h-14 rounded-full flex items-center justify-center bg-white shadow-lg shadow-[#0068FF]/30 overflow-hidden transition-transform duration-200 hover:scale-110 cursor-pointer border border-[#0068FF]/20">
+      <img src="zalo.png" alt="Zalo" class="w-full h-full object-cover rounded-full" />
+    </a>
+    <div class="pulse-ring border-[#0068FF]/50"></div>
+    <span class="absolute right-[66px] top-1/2 -translate-y-1/2 whitespace-nowrap bg-slate-900 text-white text-xs font-medium px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition pointer-events-none shadow-xl border border-white/10">
+      Chat Zalo ngay
+    </span>
+  </div>
+
+  <!-- Hotline Floating Button -->
+  <div class="relative group">
+    <a href="tel:0987654321" aria-label="Gọi Hotline Luật sư"
+       class="float-btn bg-burgundy text-white border border-gold/40 shadow-lg shadow-burgundy/30">
+      <i class="fa-solid fa-phone-volume text-base transition-transform duration-200 group-hover:scale-110"></i>
+    </a>
+    <div class="pulse-ring border-burgundy/50"></div>
+    <span class="absolute right-[62px] top-1/2 -translate-y-1/2 whitespace-nowrap bg-slate-900 text-white text-xs font-medium px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition pointer-events-none shadow-xl border border-white/10">
+      Hotline: 0987 654 321
+    </span>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     JAVASCRIPT: TABS + ANTI-COPY MODAL PREVIEW
+═══════════════════════════════════════════════════════════════ -->
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuIcon.className = isOpen ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+  });
+
+  // Filter Forms Tabs
+  function filterForms(category, btn) {
+    document.querySelectorAll('.filter-tab-form').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+
+    const items = document.querySelectorAll('.form-item');
+    items.forEach(item => {
+      const itemCat = item.getAttribute('data-category');
+      if (category === 'all' || itemCat === category) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+
+    // Dữ liệu nội dung chuẩn thể thức hành chính tư pháp 6 mẫu đơn
+  const templatesData = {
+    'BM-DD01': {
+      title: 'ĐƠN KHỞI KIỆN TRANH CHẤP QUYỀN SỬ DỤNG ĐẤT',
+      subtitle: '(Ban hành kèm theo Nghị quyết số 01/2017/NQ-HĐTP của Hội đồng Thẩm phán TANDTC - Mẫu số 23-DS)',
+      recipient: 'TÒA ÁN NHÂN DÂN HUYỆN PHÙ CÁT, TỈNH BÌNH ĐỊNH',
+      parties: `• Người khởi kiện: Ông/Bà [NGUYỄN VĂN A] – Năm sinh: 1978
+  CCCD số: 05207800xxxx do Cục Cảnh sát QLHC về TTXH cấp ngày: 15/04/2021
+  Địa chỉ thường trú: Thôn Hòa Hội, Xã Cát Hạnh, Huyện Phù Cát, Tỉnh Bình Định.
+  Số điện thoại liên hệ: 0912 xxx xxx
+
+• Người bị kiện: Ông/Bà [TRẦN VĂN B] – Năm sinh: 1975
+  Địa chỉ thường trú: Thôn Hòa Hội, Xã Cát Hạnh, Huyện Phù Cát, Tỉnh Bình Định.
+
+• Người có quyền lợi, nghĩa vụ liên quan:
+  1. Ủy ban nhân dân xã Cát Hạnh, huyện Phù Cát, tỉnh Bình Định.
+  2. Chi nhánh Văn phòng Đăng ký Đất đai huyện Phù Cát.`,
+      content: `NỘI DUNG VỤ VIỆC KHỞI KIỆN:
+1. Nguồn gốc sử dụng đất:
+Gia đình tôi là chủ sử dụng hợp pháp của thửa đất số 142, tờ bản đồ số 28, diện tích 480 m² tọa lạc tại thôn Hòa Hội, xã Cát Hạnh, huyện Phù Cát theo Giấy chứng nhận quyền sử dụng đất số CR 892341 do UBND huyện Phù Cát cấp ngày 12/08/2019. Ranh giới đất tiếp giáp với thửa đất số 143 của gia đình ông Trần Văn B.
+
+2. Hành vi lấn chiếm và phát sinh tranh chấp:
+Vào ngày 15/03/2026, gia đình ông Trần Văn B tự ý phá bỏ hàng rào ranh giới lịch sử, tiến hành đổ móng bê tông xây tường rào kiên cố lấn sâu sang thửa đất của gia đình tôi với chiều rộng 1,2 mét, chiều dài 18 mét (tổng diện tích lấn chiếm khoảng 21,6 m²). Gia đình tôi đã nhiều lần nhắc nhở, lập biên bản yêu cầu khôi phục mốc giới nhưng ông B kiên quyết không chấp hành.
+
+3. Kết quả hòa giải cơ sở:
+Vụ việc đã được UBND xã Cát Hạnh thụ lý và tổ chức hòa giải cơ sở bắt buộc theo Luật Đất đai vào ngày 10/05/2026. Kết quả: Buổi hòa giải không thành (Biên bản hòa giải số 18/BB-UBND).
+
+YÊU CẦU TÒA ÁN NHÂN DÂN HUYỆN PHÙ CÁT GIẢI QUYẾT:
+1. Buộc ông Trần Văn B phải tháo dỡ toàn bộ tường rào xây dựng trái phép, hoàn trả lại nguyên trạng 21,6 m² đất lấn chiếm cho gia đình tôi.
+2. Tuyên công nhận ranh giới sử dụng đất giữa hai thửa đất theo đúng sơ đồ trích đo địa chính và Giấy chứng nhận quyền sử dụng đất đã được cấp.
+3. Buộc Người bị kiện chịu toàn bộ chi phí đo đạc hiện trạng, chi phí định giá và án phí sơ thẩm.`,
+      evidences: `DANH MỤC TÀI LIỆU, CHỨNG CỨ KÈM THEO ĐƠN:
+1. Bản sao chứng thực CCCD của Người khởi kiện.
+2. Bản sao chứng thực Giấy chứng nhận quyền sử dụng đất số CR 892341.
+3. Bản chính Biên bản hòa giải tranh chấp đất đai không thành của UBND xã Cát Hạnh.
+4. Trích lục bản đồ địa chính thửa đất số 142 và sơ đồ hiện trạng mốc ranh giới.
+5. Biên bản và hình ảnh chụp hiện trường hành vi xây dựng lấn chiếm.`,
+      signerTitle: 'NGƯỜI KHỞI KIỆN'
+    },
+    'BM-HN02': {
+      title: 'ĐƠN YÊU CẦU CÔNG NHẬN THUẬN TÌNH LY HÔN, NUÔI CON VÀ CHIA TÀI SẢN',
+      subtitle: '(Ban hành kèm theo Nghị quyết số 04/2018/NQ-HĐTP của Hội đồng Thẩm phán TANDTC - Mẫu số 01-VDS)',
+      recipient: 'TÒA ÁN NHÂN DÂN HUYỆN PHÙ CÁT, TỈNH BÌNH ĐỊNH',
+      parties: `• Người yêu cầu giải quyết việc dân sự:
+  1. Chồng: Ông [LÊ VĂN C] – Sinh năm: 1985
+     CCCD số: 05208500xxxx – ĐT: 0983 xxx xxx
+     Địa chỉ: Thị trấn Ngô Mây, Huyện Phù Cát, Tỉnh Bình Định.
+  2. Vợ: Bà [TRẦN THỊ D] – Sinh năm: 1988
+     CCCD số: 05208800xxxx – ĐT: 0914 xxx xxx
+     Địa chỉ: Thị trấn Ngô Mây, Huyện Phù Cát, Tỉnh Bình Định.`,
+      content: `NỘI DUNG YÊU CẦU CÔNG NHẬN:
+1. Về quan hệ hôn nhân:
+Chúng tôi tự nguyện tìm hiểu và đăng ký kết hôn tại UBND thị trấn Ngô Mây vào ngày 18/06/2012 (Giấy chứng nhận kết hôn số 45/2012). Trong quá trình chung sống, do bất đồng quan điểm sống sâu sắc, thường xuyên phát sinh mâu thuẫn dẫn đến tình cảm rạn nứt không thể hàn gắn, đã ly thân từ năm 2025. Nhận thấy mục đích hôn nhân không đạt được, chúng tôi thuận tình yêu cầu Tòa án công nhận ly hôn.
+
+2. Về con chung và cấp dưỡng nuôi con:
+Chúng tôi có 02 con chung: Cháu Lê Hoàng M (sinh ngày 10/09/2014) và Cháu Lê Khánh N (sinh ngày 05/04/2018). Hai bên tự nguyện thỏa thuận: Giao cả 02 con cho bà Trần Thị D trực tiếp nuôi dưỡng; ông Lê Văn C tự nguyện cấp dưỡng nuôi con 4.000.000 VNĐ/tháng/cháu (tổng 8.000.000 VNĐ/tháng) vào ngày 05 hàng tháng cho đến khi các con đủ 18 tuổi.
+
+3. Về tài sản chung và nợ chung:
+Hai bên đã tự nguyện thỏa thuận xong, không có nợ chung với bất kỳ ai, không yêu cầu Tòa án phân chia.`,
+      evidences: `DANH MỤC TÀI LIỆU, CHỨNG CỨ KÈM THEO:
+1. Bản chính Giấy chứng nhận đăng ký kết hôn số 45/2012.
+2. Bản sao chứng thực Giấy khai sinh của 02 con chung.
+3. Bản sao chứng thực CCCD của hai vợ chồng.
+4. Bản tự khai nguyện vọng của con từ đủ 7 tuổi trở lên.`,
+      signerTitle: 'CÁC NGƯỜI YÊU CẦU (VỢ VÀ CHỒNG CÙNG KÝ)'
+    },
+    'BM-TK03': {
+      title: 'VĂN BẢN THỎA THUẬN PHÂN CHIA DI SẢN THỪA KẾ',
+      subtitle: '(Lập tại Tổ chức hành nghề công chứng trên địa bàn tỉnh Bình Định theo Bộ luật Dân sự)',
+      recipient: 'VĂN PHÒNG CÔNG CHỨNG TRÊN ĐỊA BÀN TỈNH BÌNH ĐỊNH',
+      parties: `HÔM NAY, tại Văn phòng công chứng, chúng tôi gồm các đồng thừa kế của cụ [NGUYỄN VĂN K] (đã mất ngày 15/11/2024):
+1. Bà [NGUYỄN THỊ X] – Sinh năm: 1955 (Vợ của người để lại di sản) – CCCD số: 05205500xxxx
+2. Ông [NGUYỄN VĂN Y] – Sinh năm: 1980 (Con đẻ) – CCCD số: 05208000xxxx
+3. Bà [NGUYỄN THỊ Z] – Sinh năm: 1983 (Con đẻ) – CCCD số: 05208300xxxx
+Cùng thường trú tại: Xã Cát Tiến, Huyện Phù Cát, Tỉnh Bình Định.`,
+      content: `CĂN CỨ VÀ DI SẢN THỪA KẾ:
+1. Người để lại di sản: Cụ Nguyễn Văn K mất ngày 15/11/2024 theo Giấy trích lục khai tử số 88/TLKT do UBND xã Cát Tiến cấp. Cụ K qua đời không để lại di chúc.
+2. Khối di sản phân chia: Toàn bộ quyền sử dụng đất và nhà ở tại thửa đất số 85, tờ bản đồ số 16, diện tích 320 m² tọa lạc tại thôn Tân Thanh, xã Cát Tiến theo Giấy chứng nhận quyền sử dụng đất số BD 452189 mang tên cụ Nguyễn Văn K.
+3. Tình trạng di sản: Không có tranh chấp, không bị kê biên và không bị thế chấp vay nợ.
+
+NỘI DUNG THỎA THUẬN CỦA CÁC ĐỒNG THỪA KẾ:
+Trên tinh thần đoàn kết và tự nguyện, toàn bộ người thừa kế hàng thứ nhất thống nhất:
+1. Bà Nguyễn Thị X và bà Nguyễn Thị Z tự nguyện tặng cho toàn bộ kỷ phần thừa kế của mình trong khối di sản trên cho ông Nguyễn Văn Y.
+2. Ông Nguyễn Văn Y được toàn quyền sở hữu, sử dụng trọn vẹn thửa đất và nhà ở nêu trên, được làm thủ tục đăng ký sang tên tại Văn phòng Đăng ký Đất đai.
+3. Các bên cam kết không phát sinh bất kỳ tranh chấp hay khiếu nại nào về sau.`,
+      evidences: `HỒ SƠ TÀI LIỆU KÈM THEO VĂN BẢN:
+1. Giấy trích lục khai tử của người để lại di sản.
+2. Bản gốc Giấy chứng nhận quyền sử dụng đất số BD 452189.
+3. Giấy chứng nhận kết hôn và Giấy khai sinh của các đồng thừa kế.
+4. Thông báo niêm yết công khai phân chia thừa kế 15 ngày tại UBND cấp xã.`,
+      signerTitle: 'CÁC ĐỒNG THỪA KẾ (KÝ VÀ ĐIỂM CHỈ)'
+    },
+    'BM-HD04': {
+      title: 'HỢP ĐỒNG ĐẶT CỌC CHUYỂN NHƯỢNG QUYỀN SỬ DỤNG ĐẤT VÀ TÀI SẢN TRÊN ĐẤT',
+      subtitle: '(Mẫu kiểm soát rủi ro pháp lý, cam kết quy hoạch và chế tài phạt cọc gấp đôi)',
+      recipient: 'CÁC BÊN THAM GIA GIAO DỊCH DÂN SỰ TẠI HUYỆN PHÙ CÁT, TỈNH BÌNH ĐỊNH',
+      parties: `BÊN ĐẶT CỌC (BÊN A):
+Ông/Bà: [PHẠM VĂN E] – Sinh năm: 1982 – CCCD số: 05208200xxxx
+Địa chỉ thường trú: Thị trấn Ngô Mây, Huyện Phù Cát, Tỉnh Bình Định – ĐT: 0905 xxx xxx
+
+BÊN NHẬN ĐẶT CỌC (BÊN B - VỢ CHỒNG BÊN BÁN ĐỒNG SỞ HỮU):
+1. Ông: [HOÀNG VĂN G] – Sinh năm: 1979 – CCCD số: 05207900xxxx
+2. Bà: [VÕ THỊ H] (Vợ) – Sinh năm: 1983 – CCCD số: 05208300xxxx
+Cùng thường trú tại: Xã Cát Trinh, Huyện Phù Cát, Tỉnh Bình Định.`,
+      content: `ĐIỀU KHOẢN THỎA THUẬN ĐẶT CỌC:
+Điều 1: Mục đích đặt cọc:
+Bên A đặt cọc tiền cho Bên B để đảm bảo giao kết Hợp đồng mua bán chuyển nhượng đối với thửa đất số 205, tờ bản đồ số 18, diện tích 250 m² tại xã Cát Trinh theo Giấy chứng nhận QSDĐ số DA 718293 do Sở TN&MT Bình Định cấp. Tổng giá trị chuyển nhượng thỏa thuận là: 2.500.000.000 VNĐ (Hai tỷ năm trăm triệu đồng).
+
+Điều 2: Số tiền đặt cọc và thanh toán:
+1. Tiền đặt cọc: 300.000.000 VNĐ (Ba trăm triệu đồng), Bên A thanh toán chuyển khoản đủ ngay khi ký hợp đồng này.
+2. Số tiền còn lại: 2.200.000.000 VNĐ sẽ thanh toán toàn bộ tại thời điểm hai bên ký Hợp đồng chuyển nhượng chính thức tại Văn phòng công chứng.
+
+Điều 3: Thời hạn ký công chứng và thuế phí:
+Hai bên hẹn ngày 20/11/2026 cùng có mặt tại Phòng công chứng ký hợp đồng. Thuế thu nhập cá nhân do Bên B nộp; lệ phí trước bạ do Bên A nộp.
+
+Điều 4: Chế tài phạt vi phạm cọc:
+- Nếu Bên A từ chối mua thì mất toàn bộ 300.000.000 VNĐ tiền cọc.
+- Nếu Bên B từ chối bán hoặc đất dính quy hoạch, tranh chấp không công chứng được thì Bên B phải trả lại 300.000.000 VNĐ tiền cọc và bồi thường thêm khoản tiền phạt tương đương 300.000.000 VNĐ (Phạt cọc gấp 2 lần).`,
+      evidences: `TÀI LIỆU ĐÍNH KÈM HỢP ĐỒNG:
+1. Bản photo Sổ đỏ số DA 718293 (đã kiểm tra đối chiếu bản gốc).
+2. Bản photo CCCD và Giấy đăng ký kết hôn của Bên B.
+3. Giấy ủy nhiệm chi / Biên lai chuyển tiền đặt cọc qua ngân hàng.`,
+      signerTitle: 'BÊN A & BÊN B (CẢ HAI VỢ CHỒNG ĐỒNG SỞ HỮU)'
+    },
+    'BM-HC05': {
+      title: 'ĐƠN KHIẾU NẠI (LẦN ĐẦU) VỀ GIÁ BỒI THƯỜNG VÀ HỖ TRỢ TÁI ĐỊNH CƯ THU HỒI ĐẤT',
+      subtitle: '(Lập theo quy định của Luật Khiếu nại và Luật Đất đai năm 2024)',
+      recipient: 'CHỦ TỊCH ỦY BAN NHÂN DÂN HUYỆN PHÙ CÁT, TỈNH BÌNH ĐỊNH',
+      parties: `• Người khiếu nại: Ông/Bà [ĐẶNG VĂN T] – Sinh năm: 1968
+  CCCD số: 05206800xxxx do Cục CSQLHC về TTXH cấp ngày: 22/07/2021
+  Địa chỉ thường trú: Thôn Phú Kim, Xã Cát Trinh, Huyện Phù Cát, Tỉnh Bình Định – ĐT: 0978 xxx xxx
+
+• Khiếu nại đối với:
+  Quyết định số 2145/QĐ-UBND ngày 28/08/2026 của UBND huyện Phù Cát về việc phê duyệt phương án bồi thường, giải phóng mặt bằng dự án Nâng cấp mở rộng Tỉnh lộ 638 qua địa bàn huyện Phù Cát.`,
+      content: `NỘI DUNG VÀ CĂN CỨ KHIẾU NẠI:
+1. Thửa đất bị thu hồi: Thửa đất số 56, tờ bản đồ số 12, diện tích thu hồi 180 m² đất ở tại nông thôn có nhà cấp 4 xây dựng kiên cố. Đất sử dụng ổn định có Giấy chứng nhận quyền sử dụng đất số CL 192837.
+
+2. Các điểm khiếu nại chưa thỏa đáng:
+- Đơn giá bồi thường đất: Phương án chỉ áp mức bồi thường 1.200.000 VNĐ/m², trong khi giá giao dịch thực tế thị trường tại khu vực mặt đường Tỉnh lộ 638 hiện nay từ 4.500.000 - 6.000.000 VNĐ/m² (mức áp giá chỉ bằng ~25% giá thị trường, vi phạm nguyên tắc bồi thường của Luật Đất đai).
+- Kiểm đếm thiếu tài sản: Biên bản kiểm đếm bỏ sót công trình mái hiên tôn kẽm 45 m² và hệ thống giếng khoan ngầm của gia đình.
+- Vấn đề tái định cư: Sau khi thu hồi toàn bộ đất ở, gia đình không còn đất ở nào khác trên địa bàn nhưng chưa được xem xét bố trí tái định cư.
+
+YÊU CẦU CHỦ TỊCH UBND HUYỆN PHÙ CÁT XEM XÉT:
+1. Chỉ đạo cơ quan thẩm định lại giá đất bồi thường cụ thể sát với giá thị trường.
+2. Bổ sung kiểm đếm tài sản còn thiếu và bồi thường đúng giá trị thiệt hại.
+3. Bố trí 01 lô đất tái định cư tại Khu dân cư mới xã Cát Trinh.`,
+      evidences: `DANH MỤC TÀI LIỆU CHỨNG CỨ KÈM THEO:
+1. Bản sao Quyết định số 2145/QĐ-UBND và Bảng chiết tính phương án bồi thường.
+2. Bản sao Giấy chứng nhận quyền sử dụng đất số CL 192837.
+3. Hợp đồng chuyển nhượng đất lân cận chứng minh giá thị trường.
+4. Hình ảnh chụp công trình kiến trúc bị bỏ sót trong biên bản kiểm đếm.`,
+      signerTitle: 'NGƯỜI KHIẾU NẠI'
+    },
+    'BM-HN06': {
+      title: 'ĐƠN KHỞI KIỆN YÊU CẦU THAY ĐỔI NGƯỜI TRỰC TIẾP NUÔI CON VÀ BUỘC CẤP DƯỠNG',
+      subtitle: '(Căn cứ Điều 84 Luật Hôn nhân và Gia đình năm 2014 & Bộ luật Tố tụng Dân sự)',
+      recipient: 'TÒA ÁN NHÂN DÂN HUYỆN PHÙ CÁT, TỈNH BÌNH ĐỊNH',
+      parties: `• Người khởi kiện: Bà [VŨ THỊ M] – Sinh năm: 1991
+  CCCD số: 05209100xxxx – Địa chỉ thường trú: Xã Cát Tân, Huyện Phù Cát – ĐT: 0935 xxx xxx
+  Nơi làm việc: Giáo viên Trường Tiểu học, thu nhập ổn định 14.000.000 VNĐ/tháng.
+
+• Người bị kiện: Ông [TRỊNH VĂN K] – Sinh năm: 1989
+  CCCD số: 05208900xxxx – Địa chỉ: Thôn Kiều Đông, Xã Cát Tân, Huyện Phù Cát.`,
+      content: `NỘI DUNG YÊU CẦU KHỞI KIỆN:
+1. Quyết định giao con trước đây:
+Theo Bản án ly hôn số 14/2023/HNGĐ-ST ngày 15/08/2023 của TAND huyện Phù Cát, cháu Trịnh Bảo N (sinh ngày 20/05/2017 - hiện 9 tuổi) được giao cho ông Trịnh Văn K trực tiếp nuôi dưỡng.
+
+2. Căn cứ yêu cầu thay đổi người nuôi con:
+- Từ đầu năm 2026, ông K đi làm ăn xa vắng nhà liên tục, bỏ mặc cháu N cho ông bà nội già yếu trông coi; cháu N bị thiếu hụt sự chăm sóc giáo dục, sức khỏe sa sút.
+- Bản thân tôi có nhà riêng khang trang, kinh tế ổn định, có đủ điều kiện thời gian trực tiếp chăm sóc tốt nhất cho con.
+- Cháu N đã trên 07 tuổi và tha thiết có nguyện vọng văn bản xin được về ở với mẹ.
+
+YÊU CẦU TÒA ÁN NHÂN DÂN HUYỆN PHÙ CÁT GIẢI QUYẾT:
+1. Thay đổi người trực tiếp nuôi con: Tuyên giao cháu Trịnh Bảo N cho bà Vũ Thị M trực tiếp nuôi dưỡng đến khi cháu đủ 18 tuổi.
+2. Nghĩa vụ cấp dưỡng: Buộc ông Trịnh Văn K phải đóng góp cấp dưỡng nuôi con định kỳ 3.500.000 VNĐ/tháng.`,
+      evidences: `DANH MỤC TÀI LIỆU KÈM THEO:
+1. Bản sao chứng thực Bản án ly hôn số 14/2023/HNGĐ-ST.
+2. Bản sao Giấy khai sinh của cháu Trịnh Bảo N.
+3. Bảng lương sao kê ngân hàng và Giấy tờ sở hữu nhà ở của người mẹ.
+4. Văn bản tự nguyện ghi nhận nguyện vọng sống cùng mẹ của cháu N.`,
+      signerTitle: 'NGƯỜI KHỞI KIỆN'
+    }
+  };
+
+  // Mở Popup xem trực tuyến
+  function openFormModal(templateId, legacyRecipient, legacyContent) {
+    const modal = document.getElementById('form-preview-modal');
+    if (!modal) return;
+
+    if (templatesData[templateId]) {
+      const t = templatesData[templateId];
+      document.getElementById('preview-modal-name').textContent = t.title;
+      document.getElementById('preview-title').textContent = t.title;
+      document.getElementById('preview-sub-standard').textContent = t.subtitle || '';
+      document.getElementById('preview-recipient').textContent = t.recipient || '';
+      document.getElementById('preview-parties').textContent = t.parties || '';
+      document.getElementById('preview-content').textContent = t.content || '';
+      document.getElementById('preview-evidences-box').textContent = t.evidences || '';
+      document.getElementById('preview-signer-title').textContent = t.signerTitle || 'NGƯỜI LÀM ĐƠN';
+    } else {
+      // Fallback cho tham số tùy chỉnh
+      document.getElementById('preview-modal-name').textContent = templateId || 'XEM TRƯỚC BIỂU MẪU ĐỊNH KHUNG';
+      document.getElementById('preview-title').textContent = templateId || '';
+      document.getElementById('preview-sub-standard').textContent = '';
+      document.getElementById('preview-recipient').textContent = legacyRecipient || '';
+      document.getElementById('preview-parties').textContent = '';
+      document.getElementById('preview-content').textContent = legacyContent || '';
+      document.getElementById('preview-evidences-box').textContent = '';
+      document.getElementById('preview-signer-title').textContent = 'NGƯỜI LÀM ĐƠN';
+    }
+
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+
+    // Cuộn tài liệu lên đầu trang
+    const paperContainer = modal.querySelector('.overflow-y-auto');
+    if (paperContainer) paperContainer.scrollTop = 0;
+  }
+
+  // Đóng Popup
+  function closeFormModal() {
+    const modal = document.getElementById('form-preview-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Bấm ra vùng đen bên ngoài Modal để đóng
+  const previewModal = document.getElementById('form-preview-modal');
+  if (previewModal) {
+    previewModal.addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeFormModal();
+      }
+    });
+  }
+
+  // Bấm phím ESC để đóng
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      closeFormModal();
+    }
+  });
+
+  // Chặn chuột phải, sao chép và phím tắt copy bảo vệ bản quyền
+  const paperDoc = document.getElementById('paper-doc');
+  if (paperDoc) {
+    paperDoc.addEventListener('contextmenu', (e) => e.preventDefault());
+    paperDoc.addEventListener('copy', (e) => {
+      e.preventDefault();
+      alert('Tài liệu thuộc bản quyền định khung của HAU LAW GROUP. Hệ thống chỉ hỗ trợ xem tham khảo trực tuyến, không hỗ trợ sao chép văn bản.');
+    });
+    paperDoc.addEventListener('cut', (e) => e.preventDefault());
+    paperDoc.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && ['c', 'C', 'a', 'A', 'p', 'P', 's', 'S', 'u', 'U'].includes(e.key)) {
+        e.preventDefault();
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

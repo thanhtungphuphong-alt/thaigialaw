@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bản Tin Pháp Luật | THAIGIA LAW GROUP - Chi Nhánh Phù Cát</title>
+  <meta name="description" content="Chuyên mục Bản tin pháp luật, phân tích chính sách mới, án lệ và giải đáp pháp lý thực tiễn từ LS. Nguyễn Tiến Nguyên - Công ty Luật TNHH Thái Gia, Chi nhánh Phù Cát (HAU LAW GROUP)." />
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans (Hỗ trợ tiếng Việt đầy đủ) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              DEFAULT: '#7F1D1D',
+              900: '#450a0a',
+              800: '#7F1D1D',
+              700: '#991b1b',
+              600: '#b91c1c',
+              50:  '#fef2f2',
+              100: '#fee2e2',
+            },
+            gold: {
+              DEFAULT: '#D4AF37',
+              light:   '#F3E5AB',
+              muted:   '#C5A880',
+              dark:    '#AA820A',
+            },
+            pearl: '#F8FAFC',
+          },
+          fontFamily: {
+            serif:    ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:     ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ── Base ── */
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FFFFFF;
+      color: #1E293B;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* ── Gold gradient text & lines ── */
+    .text-gold-grad {
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA820A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-burgundy-grad {
+      background: linear-gradient(135deg, #b91c1c 0%, #7F1D1D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gold-line {
+      width: 54px; height: 2px;
+      background: linear-gradient(90deg, #D4AF37, #F3E5AB, #D4AF37);
+      border-radius: 9999px;
+    }
+    .gold-line-full {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    }
+
+    /* ── Sticky Nav ── */
+    #navbar { transition: background .3s, box-shadow .3s; }
+    #navbar.scrolled {
+      background-color: rgba(255,255,255,.98) !important;
+      box-shadow: 0 4px 20px rgba(127,29,29,.08);
+    }
+
+    /* ── Filter Tabs ── */
+    .filter-tab-news {
+      transition: all .25s ease;
+    }
+    .filter-tab-news.active {
+      background-color: #7F1D1D !important;
+      color: #FFFFFF !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 14px rgba(127,29,29,0.22);
+    }
+
+    /* ── Article Card ── */
+    .news-card {
+      border: 1px solid #ebdcb2;
+      border-radius: 10px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 10px rgba(127,29,29,.04);
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(127,29,29,.12);
+      border-color: #D4AF37;
+    }
+
+    /* ── Floating Buttons ── */
+    .float-btn {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(0,0,0,.22);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .float-btn:hover { transform: scale(1.12); box-shadow: 0 8px 26px rgba(0,0,0,.3); }
+
+    .pulse-ring {
+      position: absolute; inset: -4px;
+      border-radius: 50%;
+      border: 2px solid;
+      animation: pulse-out 2.2s ease-out infinite;
+    }
+    @keyframes pulse-out {
+      0%   { opacity: .65; transform: scale(1); }
+      100% { opacity: 0;   transform: scale(1.65); }
+    }
+
+    /* Mobile nav */
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height .35s ease-in-out; }
+    #mobile-menu.open { max-height: 480px; }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #F8FAFC; }
+    ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HEADER & MENU ĐIỀU HƯỚNG
+═══════════════════════════════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-gold/25">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo Brand -->
+      <a href="index.html" class="flex items-center gap-3.5 flex-shrink-0" aria-label="Trang chủ Thái Gia Law">
+        <div class="logo-wrap flex-shrink-0" title="Thay thế logo.png tại đây">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="23" cy="23" r="22" fill="#7F1D1D" stroke="#D4AF37" stroke-width="1.5"/>
+            <path d="M23 8 L34 13 L34 23 C34 29.5 28.5 34.5 23 37 C17.5 34.5 12 29.5 12 23 L12 13 Z"
+                  fill="none" stroke="#D4AF37" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M23 11.5 L31.5 15.5 L31.5 23 C31.5 28.2 27.5 32.5 23 34.5 C18.5 32.5 14.5 28.2 14.5 23 L14.5 15.5 Z"
+                  fill="rgba(212,175,55,0.08)"/>
+            <line x1="23" y1="18" x2="23" y2="28" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="17" y1="20" x2="29" y2="20" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M15 20 C14 21.5 14 23 15 24 L19 24 C20 23 20 21.5 19 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+            <path d="M27 20 C26 21.5 26 23 27 24 L31 24 C32 23 32 21.5 31 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+          </svg>
+        </div>
+
+        <div class="leading-tight">
+          <p class="font-serif font-bold text-burgundy text-sm sm:text-[15px] tracking-wide uppercase">
+            THAIGIA LAW
+          </p>
+          <p class="text-slate-500 text-[9.5px] tracking-wider uppercase font-semibold">
+            Chi Nhánh Phù Cát
+          </p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex items-center gap-7 text-[.84rem] font-medium text-slate-700">
+        <li><a href="index.html" class="hover:text-burgundy transition-colors pb-1">Trang Chủ</a></li>
+        <li><a href="ban-tin.html" class="text-burgundy font-semibold border-b-2 border-burgundy pb-1">Bản Tin Pháp Luật</a></li>
+        <li><a href="bieu-mau.html" class="hover:text-burgundy transition-colors pb-1">Biểu Mẫu Tham Khảo</a></li>
+        <li><a href="lien-he.html" class="hover:text-burgundy transition-colors pb-1">Liên Hệ</a></li>
+      </ul>
+
+      <!-- CTA & Hotline -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:0987654321" class="flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-burgundy transition-colors">
+          <div class="w-7 h-7 rounded-full bg-burgundy-50 border border-burgundy/20 flex items-center justify-center text-burgundy text-xs">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <span>0987 654 321</span>
+        </a>
+        <a href="lien-he.html"
+           class="px-5 py-2.5 rounded-full bg-burgundy text-white font-semibold text-[.82rem] hover:bg-burgundy-700 transition shadow-md shadow-burgundy/20 border border-gold/30 flex items-center gap-1.5">
+          <i class="fa-solid fa-calendar-check text-gold text-xs"></i> Tư Vấn Ngay
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Mobile -->
+      <button id="menu-btn" class="lg:hidden text-burgundy hover:text-burgundy-700 focus:outline-none p-2" aria-label="Menu">
+        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="lg:hidden border-t border-gold/20">
+      <ul class="flex flex-col py-4 gap-1 text-sm font-medium text-slate-700">
+        <li><a href="index.html" class="block px-3 py-2 hover:text-burgundy rounded-lg">Trang Chủ</a></li>
+        <li><a href="ban-tin.html" class="block px-3 py-2 text-burgundy font-semibold rounded-lg bg-burgundy-50">Bản Tin Pháp Luật</a></li>
+        <li><a href="bieu-mau.html" class="block px-3 py-2 hover:text-burgundy rounded-lg">Biểu Mẫu Tham Khảo</a></li>
+        <li><a href="lien-he.html" class="block px-3 py-2 hover:text-burgundy rounded-lg">Liên Hệ</a></li>
+        <li class="pt-3 border-t border-slate-100 flex flex-col gap-2 mt-2">
+          <a href="tel:0987654321" class="flex items-center justify-center gap-2 py-2 text-sm font-semibold text-burgundy bg-burgundy-50 rounded-lg">
+            <i class="fa-solid fa-phone"></i> Hotline: 0987 654 321
+          </a>
+          <a href="lien-he.html" class="py-2.5 text-center rounded-lg bg-burgundy text-white font-semibold text-sm border border-gold/30">
+            Tư Vấn Ngay
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     BANNER TIÊU ĐỀ CHUYÊN MỤC
+═══════════════════════════════════════════════════════════════ -->
+<header class="pt-24 pb-12 md:pt-28 md:pb-16 px-4 bg-gradient-to-b from-burgundy via-burgundy-800 to-burgundy-900 text-white relative overflow-hidden border-b border-gold/30">
+  <div class="absolute inset-0 opacity-5" style="background-image:repeating-linear-gradient(45deg,#D4AF37 0,#D4AF37 1px,transparent 0,transparent 50%);background-size:24px 24px;"></div>
+  <div class="max-w-4xl mx-auto w-full text-center relative z-10">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold/40 bg-gold/15 text-gold-light text-xs font-bold uppercase tracking-wider mb-4">
+      <i class="fa-solid fa-scale-balanced text-[10px]"></i> Chuyên mục pháp luật &amp; Án lệ
+    </div>
+    <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 tracking-wide uppercase text-white whitespace-nowrap">
+      BẢN TIN <span class="text-[#D4AF37]">PHÁP LUẬT</span>
+    </h1>
+    <p class="text-red-100/80 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+      Cập nhật chính sách mới, giải đáp vướng mắc và kinh nghiệm thực tiễn từ Luật sư.
+    </p>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     BỘ LỌC DANH MỤC & LƯỚI BÀI VIẾT
+═══════════════════════════════════════════════════════════════ -->
+<main class="py-16 px-4 bg-pearl min-h-screen">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Tabs Filter JS -->
+    <div class="flex flex-wrap justify-center gap-2.5 mb-12">
+      <button type="button" onclick="filterNews('all', this)"
+              class="filter-tab-news active px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Tất Cả
+      </button>
+      <button type="button" onclick="filterNews('dat-dai', this)"
+              class="filter-tab-news px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Đất Đai &amp; Nhà Ở
+      </button>
+      <button type="button" onclick="filterNews('hon-nhan', this)"
+              class="filter-tab-news px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Hôn Nhân &amp; Gia Đình
+      </button>
+      <button type="button" onclick="filterNews('thua-ke', this)"
+              class="filter-tab-news px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Thừa Kế &amp; Dân Sự
+      </button>
+      <button type="button" onclick="filterNews('doanh-nghiep', this)"
+              class="filter-tab-news px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-gold hover:text-burgundy shadow-sm">
+        Doanh Nghiệp &amp; Lao Động
+      </button>
+    </div>
+
+    <!-- Grid 6 bài viết chuẩn SEO -->
+    <div id="news-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+
+      <!-- Bài 1: Đất đai -->
+      <article class="news-item news-card overflow-hidden flex flex-col" data-category="dat-dai">
+        <div class="relative h-48 overflow-hidden bg-slate-100">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&auto=format&fit=crop&q=80"
+               alt="Những lưu ý sống còn khi giải quyết tranh chấp ranh giới đất đai năm 2026"
+               class="w-full h-full object-cover transition duration-500 hover:scale-105" />
+          <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-burgundy/90 text-gold-light text-[11px] font-semibold tracking-wider border border-gold/30">
+            Đất Đai
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+              <span><i class="fa-regular fa-calendar text-gold mr-1"></i> 26/10/2026</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock text-gold mr-1"></i> 5 phút đọc</span>
+            </div>
+            <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 leading-snug mb-3 hover:text-burgundy transition-colors">
+              <a href="#article-modal" onclick="openArticleModal('Những lưu ý sống còn khi giải quyết tranh chấp ranh giới đất đai năm 2026', 'LS. Nguyễn Tiến Nguyên', 'Tranh chấp ranh giới đất đai là một trong những dạng tranh chấp phổ biến và phức tạp nhất tại Bình Định. Theo Luật Đất đai mới, việc hòa giải tại UBND cấp xã/thị trấn là thủ tục bắt buộc trước khi khởi kiện tại Tòa án nhân dân. Để bảo vệ tối đa quyền sử dụng đất, người sử dụng đất cần lưu ý: (1) Thu thập toàn bộ trích lục bản đồ địa chính qua các thời kỳ, sổ mục kê, biên bản cắm mốc ranh giới ban đầu; (2) Yêu cầu cơ quan đo đạc độc lập lập bản vẽ hiện trạng hiện nay đối chiếu với hồ sơ cấp sổ; (3) Giữ nguyên hiện trạng mốc giới, tránh các hành vi tự ý lấn chiếm dẫn đến vi phạm hành chính hoặc hình sự.')">
+                Những lưu ý sống còn khi giải quyết tranh chấp ranh giới đất đai năm 2026
+              </a>
+            </h2>
+            <p class="text-slate-500 text-sm leading-relaxed mb-4">
+              Hướng dẫn toàn diện về trình tự hòa giải tại UBND cấp xã, đo đạc hiện trạng và thu thập chứng cứ nguồn gốc sử dụng đất tránh thất thế tại Tòa.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex justify-end items-center">
+            <button type="button" onclick="openArticleModal('Những lưu ý sống còn khi giải quyết tranh chấp ranh giới đất đai năm 2026', 'LS. Nguyễn Tiến Nguyên', 'Tranh chấp ranh giới đất đai là một trong những dạng tranh chấp phổ biến và phức tạp nhất tại Bình Định. Theo Luật Đất đai mới, việc hòa giải tại UBND cấp xã/thị trấn là thủ tục bắt buộc trước khi khởi kiện tại Tòa án nhân dân. Để bảo vệ tối đa quyền sử dụng đất, người sử dụng đất cần lưu ý: (1) Thu thập toàn bộ trích lục bản đồ địa chính qua các thời kỳ, sổ mục kê, biên bản cắm mốc ranh giới ban đầu; (2) Yêu cầu cơ quan đo đạc độc lập lập bản vẽ hiện trạng hiện nay đối chiếu với hồ sơ cấp sổ; (3) Giữ nguyên hiện trạng mốc giới, tránh các hành vi tự ý lấn chiếm dẫn đến vi phạm hành chính hoặc hình sự.')"
+                    class="font-sans inline-flex items-center gap-1 text-xs font-semibold text-[#7F1D1D] hover:text-[#D4AF37] transition-colors">
+              Đọc bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bài 2: Hôn nhân -->
+      <article class="news-item news-card overflow-hidden flex flex-col" data-category="hon-nhan">
+        <div class="relative h-48 overflow-hidden bg-slate-100">
+          <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=700&auto=format&fit=crop&q=80"
+               alt="Hồ sơ và chứng cứ quan trọng để giành quyền trực tiếp nuôi con khi ly hôn"
+               class="w-full h-full object-cover transition duration-500 hover:scale-105" />
+          <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-burgundy/90 text-gold-light text-[11px] font-semibold tracking-wider border border-gold/30">
+            Hôn Nhân
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+              <span><i class="fa-regular fa-calendar text-gold mr-1"></i> 24/10/2026</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock text-gold mr-1"></i> 6 phút đọc</span>
+            </div>
+            <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 leading-snug mb-3 hover:text-burgundy transition-colors">
+              <a href="#article-modal" onclick="openArticleModal('Hồ sơ và chứng cứ quan trọng để giành quyền trực tiếp nuôi con khi ly hôn', 'Tổ Pháp Lý Hôn Nhân', 'Khi giải quyết ly hôn có tranh chấp về quyền trực tiếp nuôi con, Tòa án căn cứ vào quyền lợi về mọi mặt của con. Các nhóm chứng cứ giữ vai trò quyết định bao gồm: (1) Chứng minh điều kiện kinh tế: Thu nhập ổn định, bảng lương, quyền sở hữu chỗ ở an toàn; (2) Điều kiện về thời gian và tinh thần: Quỹ thời gian chăm sóc, đưa đón học tập, nhân thân đạo đức tốt, không có thói quen bạo lực hay cờ bạc; (3) Nguyện vọng của con: Đối với con từ đủ 07 tuổi trở lên, Tòa bắt buộc phải lấy ý kiến bằng văn bản của con để làm cơ sở xem xét.')">
+                Hồ sơ và chứng cứ quan trọng để giành quyền trực tiếp nuôi con khi ly hôn
+              </a>
+            </h2>
+            <p class="text-slate-500 text-sm leading-relaxed mb-4">
+              Phân tích các yếu tố Tòa án xem xét: điều kiện kinh tế, thời gian chăm sóc, nhân thân đạo đức và nguyện vọng của con từ đủ 7 tuổi trở lên.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex justify-end items-center">
+            <button type="button" onclick="openArticleModal('Hồ sơ và chứng cứ quan trọng để giành quyền trực tiếp nuôi con khi ly hôn', 'Tổ Pháp Lý Hôn Nhân', 'Khi giải quyết ly hôn có tranh chấp về quyền trực tiếp nuôi con, Tòa án căn cứ vào quyền lợi về mọi mặt của con. Các nhóm chứng cứ giữ vai trò quyết định bao gồm: (1) Chứng minh điều kiện kinh tế: Thu nhập ổn định, bảng lương, quyền sở hữu chỗ ở an toàn; (2) Điều kiện về thời gian và tinh thần: Quỹ thời gian chăm sóc, đưa đón học tập, nhân thân đạo đức tốt, không có thói quen bạo lực hay cờ bạc; (3) Nguyện vọng của con: Đối với con từ đủ 07 tuổi trở lên, Tòa bắt buộc phải lấy ý kiến bằng văn bản của con để làm cơ sở xem xét.')"
+                    class="font-sans inline-flex items-center gap-1 text-xs font-semibold text-[#7F1D1D] hover:text-[#D4AF37] transition-colors">
+              Đọc bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bài 3: Thừa kế -->
+      <article class="news-item news-card overflow-hidden flex flex-col" data-category="thua-ke">
+        <div class="relative h-48 overflow-hidden bg-slate-100">
+          <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=700&auto=format&fit=crop&q=80"
+               alt="Thủ tục khai nhận và phân chia di sản thừa kế theo pháp luật khi không có di chúc"
+               class="w-full h-full object-cover transition duration-500 hover:scale-105" />
+          <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-burgundy/90 text-gold-light text-[11px] font-semibold tracking-wider border border-gold/30">
+            Thừa Kế
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+              <span><i class="fa-regular fa-calendar text-gold mr-1"></i> 22/10/2026</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock text-gold mr-1"></i> 4 phút đọc</span>
+            </div>
+            <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 leading-snug mb-3 hover:text-burgundy transition-colors">
+              <a href="#article-modal" onclick="openArticleModal('Thủ tục khai nhận và phân chia di sản thừa kế theo pháp luật khi không có di chúc', 'LS. Nguyễn Tiến Nguyên', 'Trường hợp người để lại tài sản mất không để lại di chúc hoặc di chúc không hợp pháp, toàn bộ di sản sẽ được chia đều cho các đồng thừa kế thuộc hàng thừa kế thứ nhất (cha mẹ, vợ chồng, con đẻ, con nuôi). Quy trình chuẩn hóa gồm: (1) Chuẩn bị hồ sơ giấy tờ chứng minh quan hệ nhân thân (giấy khai sinh, đăng ký kết hôn, giấy báo tử); (2) Giấy tờ chứng minh quyền sở hữu tài sản (sổ đỏ, sổ tiết kiệm); (3) Niêm yết công khai 15 ngày tại UBND cấp xã nơi người mất thường trú; (4) Lập Văn bản thỏa thuận phân chia di sản thừa kế tại Văn phòng công chứng để thực hiện thủ tục sang tên đổi chủ.')">
+                Thủ tục khai nhận và phân chia di sản thừa kế theo pháp luật khi không có di chúc
+              </a>
+            </h2>
+            <p class="text-slate-500 text-sm leading-relaxed mb-4">
+              Xác định hàng thừa kế theo Bộ luật Dân sự, hồ sơ niêm yết công khai tại UBND xã và thủ tục phân chia nhà đất không xảy ra tranh cãi.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex justify-end items-center">
+            <button type="button" onclick="openArticleModal('Thủ tục khai nhận và phân chia di sản thừa kế theo pháp luật khi không có di chúc', 'LS. Nguyễn Tiến Nguyên', 'Trường hợp người để lại tài sản mất không để lại di chúc hoặc di chúc không hợp pháp, toàn bộ di sản sẽ được chia đều cho các đồng thừa kế thuộc hàng thừa kế thứ nhất (cha mẹ, vợ chồng, con đẻ, con nuôi). Quy trình chuẩn hóa gồm: (1) Chuẩn bị hồ sơ giấy tờ chứng minh quan hệ nhân thân (giấy khai sinh, đăng ký kết hôn, giấy báo tử); (2) Giấy tờ chứng minh quyền sở hữu tài sản (sổ đỏ, sổ tiết kiệm); (3) Niêm yết công khai 15 ngày tại UBND cấp xã nơi người mất thường trú; (4) Lập Văn bản thỏa thuận phân chia di sản thừa kế tại Văn phòng công chứng để thực hiện thủ tục sang tên đổi chủ.')"
+                    class="font-sans inline-flex items-center gap-1 text-xs font-semibold text-[#7F1D1D] hover:text-[#D4AF37] transition-colors">
+              Đọc bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bài 4: Hợp đồng đặt cọc -->
+      <article class="news-item news-card overflow-hidden flex flex-col" data-category="thua-ke">
+        <div class="relative h-48 overflow-hidden bg-slate-100">
+          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=700&auto=format&fit=crop&q=80"
+               alt="Cách phòng ngừa rủi ro khi ký kết hợp đồng đặt cọc mua bán nhà đất"
+               class="w-full h-full object-cover transition duration-500 hover:scale-105" />
+          <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-burgundy/90 text-gold-light text-[11px] font-semibold tracking-wider border border-gold/30">
+            Dân Sự &amp; Hợp Đồng
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+              <span><i class="fa-regular fa-calendar text-gold mr-1"></i> 19/10/2026</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock text-gold mr-1"></i> 7 phút đọc</span>
+            </div>
+            <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 leading-snug mb-3 hover:text-burgundy transition-colors">
+              <a href="#article-modal" onclick="openArticleModal('Cách phòng ngừa rủi ro khi ký kết hợp đồng đặt cọc mua bán nhà đất', 'Tổ Pháp Lý Hợp Đồng', 'Hợp đồng đặt cọc tiềm ẩn nhiều bẫy pháp lý nếu người mua không kiểm tra kỹ thông tin: (1) Kiểm tra trực tiếp quy hoạch tại Chi nhánh Văn phòng Đăng ký Đất đai huyện Phù Cát trước khi chuyển tiền; (2) Yêu cầu có đầy đủ chữ ký của vợ/chồng hoặc tất cả các thành viên hộ gia đình đồng sở hữu trên sổ đỏ; (3) Quy định rõ trách nhiệm nộp thuế thu nhập cá nhân, lệ phí trước bạ và thời hạn công chứng hợp đồng chính thức; (4) Thỏa thuận mức phạt cọc rõ ràng và cơ chế hoàn tiền cọc nếu phát sinh trường hợp bất khả kháng do quy hoạch hoặc kê biên cưỡng chế.')">
+                Cách phòng ngừa rủi ro khi ký kết hợp đồng đặt cọc mua bán nhà đất
+              </a>
+            </h2>
+            <p class="text-slate-500 text-sm leading-relaxed mb-4">
+              Nhận diện 5 cái bẫy thường gặp về điều khoản phạt cọc, quy hoạch treo, đất đồng sở hữu và phương thức thanh toán an toàn qua ngân hàng.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex justify-end items-center">
+            <button type="button" onclick="openArticleModal('Cách phòng ngừa rủi ro khi ký kết hợp đồng đặt cọc mua bán nhà đất', 'Tổ Pháp Lý Hợp Đồng', 'Hợp đồng đặt cọc tiềm ẩn nhiều bẫy pháp lý nếu người mua không kiểm tra kỹ thông tin: (1) Kiểm tra trực tiếp quy hoạch tại Chi nhánh Văn phòng Đăng ký Đất đai huyện Phù Cát trước khi chuyển tiền; (2) Yêu cầu có đầy đủ chữ ký của vợ/chồng hoặc tất cả các thành viên hộ gia đình đồng sở hữu trên sổ đỏ; (3) Quy định rõ trách nhiệm nộp thuế thu nhập cá nhân, lệ phí trước bạ và thời hạn công chứng hợp đồng chính thức; (4) Thỏa thuận mức phạt cọc rõ ràng và cơ chế hoàn tiền cọc nếu phát sinh trường hợp bất khả kháng do quy hoạch hoặc kê biên cưỡng chế.')"
+                    class="font-sans inline-flex items-center gap-1 text-xs font-semibold text-[#7F1D1D] hover:text-[#D4AF37] transition-colors">
+              Đọc bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bài 5: Khiếu nại bồi thường thu hồi đất -->
+      <article class="news-item news-card overflow-hidden flex flex-col" data-category="dat-dai">
+        <div class="relative h-48 overflow-hidden bg-slate-100">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=700&auto=format&fit=crop&q=80"
+               alt="Trình tự khiếu nại quyết định bồi thường, thu hồi đất đúng quy định"
+               class="w-full h-full object-cover transition duration-500 hover:scale-105" />
+          <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-burgundy/90 text-gold-light text-[11px] font-semibold tracking-wider border border-gold/30">
+            Đất Đai &amp; Hành Chính
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+              <span><i class="fa-regular fa-calendar text-gold mr-1"></i> 15/10/2026</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock text-gold mr-1"></i> 6 phút đọc</span>
+            </div>
+            <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 leading-snug mb-3 hover:text-burgundy transition-colors">
+              <a href="#article-modal" onclick="openArticleModal('Trình tự khiếu nại quyết định bồi thường, thu hồi đất đúng quy định', 'LS. Nguyễn Tiến Nguyên', 'Khi nhận được thông báo thu hồi đất hoặc quyết định phê duyệt phương án bồi thường, hỗ trợ tái định cư chưa thỏa đáng, người có đất thu hồi có quyền: (1) Nộp đơn khiếu nại lần đầu đến Chủ tịch UBND cấp huyện (thời hiệu 90 ngày kể từ ngày nhận quyết định); (2) Thu thập chứng cứ về giá đất thị trường, loại đất thực tế sử dụng và tài sản trên đất chưa được kiểm đếm đúng; (3) Nếu không đồng ý với quyết định giải quyết khiếu nại lần đầu, người dân có quyền khiếu nại lên cấp tỉnh hoặc trực tiếp khởi kiện vụ án hành chính tại Tòa án nhân dân tỉnh Bình Định.')">
+                Trình tự khiếu nại quyết định bồi thường, thu hồi đất đúng quy định
+              </a>
+            </h2>
+            <p class="text-slate-500 text-sm leading-relaxed mb-4">
+              Thời hiệu khiếu nại lần đầu, khởi kiện vụ án hành chính tại TAND tỉnh Bình Định và các luận cứ đòi quyền lợi tái định cư, bồi thường sát giá thị trường.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex justify-end items-center">
+            <button type="button" onclick="openArticleModal('Trình tự khiếu nại quyết định bồi thường, thu hồi đất đúng quy định', 'LS. Nguyễn Tiến Nguyên', 'Khi nhận được thông báo thu hồi đất hoặc quyết định phê duyệt phương án bồi thường, hỗ trợ tái định cư chưa thỏa đáng, người có đất thu hồi có quyền: (1) Nộp đơn khiếu nại lần đầu đến Chủ tịch UBND cấp huyện (thời hiệu 90 ngày kể từ ngày nhận quyết định); (2) Thu thập chứng cứ về giá đất thị trường, loại đất thực tế sử dụng và tài sản trên đất chưa được kiểm đếm đúng; (3) Nếu không đồng ý với quyết định giải quyết khiếu nại lần đầu, người dân có quyền khiếu nại lên cấp tỉnh hoặc trực tiếp khởi kiện vụ án hành chính tại Tòa án nhân dân tỉnh Bình Định.')"
+                    class="font-sans inline-flex items-center gap-1 text-xs font-semibold text-[#7F1D1D] hover:text-[#D4AF37] transition-colors">
+              Đọc bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bài 6: Doanh nghiệp -->
+      <article class="news-item news-card overflow-hidden flex flex-col" data-category="doanh-nghiep">
+        <div class="relative h-48 overflow-hidden bg-slate-100">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&auto=format&fit=crop&q=80"
+               alt="Pháp chế doanh nghiệp: Quy trình xử lý kỷ luật lao động hợp pháp"
+               class="w-full h-full object-cover transition duration-500 hover:scale-105" />
+          <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-burgundy/90 text-gold-light text-[11px] font-semibold tracking-wider border border-gold/30">
+            Doanh Nghiệp
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+              <span><i class="fa-regular fa-calendar text-gold mr-1"></i> 11/10/2026</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock text-gold mr-1"></i> 5 phút đọc</span>
+            </div>
+            <h2 class="font-serif text-[1.12rem] font-bold text-slate-800 leading-snug mb-3 hover:text-burgundy transition-colors">
+              <a href="#article-modal" onclick="openArticleModal('Pháp chế doanh nghiệp: Quy trình xử lý kỷ luật lao động hợp pháp', 'Ban Pháp Chế THAIGIA', 'Xử lý kỷ luật người lao động sai quy trình có thể khiến doanh nghiệp đối mặt với các bản án buộc bồi thường tiền lương lớn và nhận người lao động trở lại làm việc. Doanh nghiệp cần tuân thủ 4 bước cốt lõi: (1) Lập biên bản vi phạm kỷ luật ngay khi phát hiện hành vi; (2) Thông báo mời họp xử lý kỷ luật trước ít nhất 05 ngày làm việc cho người lao động và tổ chức đại diện người lao động tại cơ sở; (3) Tiến hành họp kỷ luật phải có sự tham gia của các bên và lập biên bản đầy đủ chữ ký; (4) Người có thẩm quyền ký quyết định xử lý kỷ luật trong thời hiệu luật định.')">
+                Pháp chế doanh nghiệp: Quy trình xử lý kỷ luật lao động hợp pháp
+              </a>
+            </h2>
+            <p class="text-slate-500 text-sm leading-relaxed mb-4">
+              Các bước họp kỷ luật bắt buộc, lập biên bản vi phạm, thời hiệu xử lý và cách hạn chế rủi ro bồi thường tiền lương khi sa thải nhân sự.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex justify-end items-center">
+            <button type="button" onclick="openArticleModal('Pháp chế doanh nghiệp: Quy trình xử lý kỷ luật lao động hợp pháp', 'Ban Pháp Chế THAIGIA', 'Xử lý kỷ luật người lao động sai quy trình có thể khiến doanh nghiệp đối mặt với các bản án buộc bồi thường tiền lương lớn và nhận người lao động trở lại làm việc. Doanh nghiệp cần tuân thủ 4 bước cốt lõi: (1) Lập biên bản vi phạm kỷ luật ngay khi phát hiện hành vi; (2) Thông báo mời họp xử lý kỷ luật trước ít nhất 05 ngày làm việc cho người lao động và tổ chức đại diện người lao động tại cơ sở; (3) Tiến hành họp kỷ luật phải có sự tham gia của các bên và lập biên bản đầy đủ chữ ký; (4) Người có thẩm quyền ký quyết định xử lý kỷ luật trong thời hiệu luật định.')"
+                    class="font-sans inline-flex items-center gap-1 text-xs font-semibold text-[#7F1D1D] hover:text-[#D4AF37] transition-colors">
+              Đọc bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- CTA Section đặt lịch tư vấn -->
+    <div class="mt-16 bg-white rounded-2xl border-2 border-gold/30 p-8 sm:p-10 text-center shadow-lg shadow-burgundy/5">
+      <div class="w-14 h-14 mx-auto rounded-full bg-burgundy-50 border border-gold/40 flex items-center justify-center text-burgundy text-2xl mb-4">
+        <i class="fa-solid fa-comments"></i>
+      </div>
+      <h3 class="font-serif text-2xl font-bold text-slate-800 mb-2 tracking-wide uppercase">
+        BẠN CẦN TƯ VẤN <span class="text-burgundy-grad">VẤN ĐỀ PHÁP LÝ RIÊNG CỦA MÌNH?</span>
+      </h3>
+      <p class="text-slate-500 text-sm max-w-xl mx-auto mb-6">
+        Mỗi vụ việc đều có tình tiết và hồ sơ chứng cứ đặc thù. Hãy trao đổi trực tiếp với Luật sư Nguyễn Tiến Nguyên để nhận giải pháp chính xác nhất.
+      </p>
+      <a href="lien-he.html"
+         class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-burgundy text-white font-bold text-sm hover:bg-burgundy-700 transition shadow-lg border border-gold/40">
+        <i class="fa-solid fa-phone-volume text-gold"></i> Đăng Ký Tư Vấn Ngay
+      </a>
+    </div>
+
+  </div>
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MODAL ĐỌC BÀI VIẾT POPUP
+═══════════════════════════════════════════════════════════════ -->
+<div id="article-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl border-2 border-gold/40 max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+    <button type="button" onclick="closeArticleModal()" class="absolute top-5 right-5 text-slate-400 hover:text-burgundy text-2xl font-bold focus:outline-none">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="gold-line mb-4"></div>
+    <span id="modal-author" class="text-xs font-semibold text-gold-dark tracking-wide uppercase"></span>
+    <h3 id="modal-title" class="font-serif text-xl sm:text-2xl font-bold text-slate-800 my-3 leading-snug"></h3>
+    <div class="py-4 border-y border-slate-100 text-slate-600 text-sm leading-relaxed" id="modal-body"></div>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-end items-center">
+      <a href="lien-he.html" class="w-full sm:w-auto px-5 py-2.5 rounded-full bg-burgundy text-white font-semibold text-xs text-center border border-gold/30 hover:bg-burgundy-700">
+        Liên Hệ Luật Sư Tư Vấn Vụ Việc Này
+      </a>
+      <button type="button" onclick="closeArticleModal()" class="w-full sm:w-auto px-5 py-2.5 rounded-full bg-slate-100 text-slate-700 font-semibold text-xs hover:bg-slate-200">
+        Đóng
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer class="bg-gradient-to-b from-[#4A0E17] via-[#3E0B13] to-[#30080E] border-t-2 border-[#D4AF37]/35 pt-16 pb-8 px-4 text-[#E2E8F0] relative overflow-hidden">
+    <!-- Watermark Logo khiên cán cân ẩn chìm dưới nền Footer -->
+  <div class="absolute right-[-40px] sm:right-4 md:right-[15%] lg:right-[20%] top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 opacity-[0.07] flex items-center justify-center" aria-hidden="true">
+    <svg width="480" height="480" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] md:w-[480px] md:h-[480px]">
+      <circle cx="23" cy="23" r="22" stroke="#D4AF37" stroke-width="1.2"/>
+      <path d="M23 8 L34 13 L34 23 C34 29.5 28.5 34.5 23 37 C17.5 34.5 12 29.5 12 23 L12 13 Z"
+            fill="none" stroke="#D4AF37" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M23 11.5 L31.5 15.5 L31.5 23 C31.5 28.2 27.5 32.5 23 34.5 C18.5 32.5 14.5 28.2 14.5 23 L14.5 15.5 Z"
+            fill="#D4AF37" fill-opacity="0.25"/>
+      <line x1="23" y1="18" x2="23" y2="28" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="17" y1="20" x2="29" y2="20" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M15 20 C14 21.5 14 23 15 24 L19 24 C20 23 20 21.5 19 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+      <path d="M27 20 C26 21.5 26 23 27 24 L31 24 C32 23 32 21.5 31 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 mb-12">
+
+      <!-- Cột 1: Thương hiệu & Tôn chỉ (md:col-span-5) -->
+      <div class="md:col-span-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3.5 mb-4">
+            <svg width="44" height="44" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+              <circle cx="23" cy="23" r="22" fill="#7F1D1D" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M23 8 L34 13 L34 23 C34 29.5 28.5 34.5 23 37 C17.5 34.5 12 29.5 12 23 L12 13 Z"
+                    fill="none" stroke="#D4AF37" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M23 11.5 L31.5 15.5 L31.5 23 C31.5 28.2 27.5 32.5 23 34.5 C18.5 32.5 14.5 28.2 14.5 23 L14.5 15.5 Z"
+                    fill="rgba(212,175,55,0.12)"/>
+              <line x1="23" y1="18" x2="23" y2="28" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="17" y1="20" x2="29" y2="20" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M15 20 C14 21.5 14 23 15 24 L19 24 C20 23 20 21.5 19 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+              <path d="M27 20 C26 21.5 26 23 27 24 L31 24 C32 23 32 21.5 31 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+            </svg>
+            <div>
+              <p class="font-serif font-bold text-[#D4AF37] text-base tracking-wider uppercase">THAIGIA LAW</p>
+              <p class="text-red-200/85 text-[10px] tracking-widest uppercase">Chi Nhánh Phù Cát – HAU LAW GROUP</p>
+            </div>
+          </div>
+
+          <p class="text-[#E2E8F0] text-sm leading-relaxed mb-4 max-w-md">
+            <strong class="text-white font-semibold">CÔNG TY LUẬT TNHH THÁI GIA – CHI NHÁNH PHÙ CÁT</strong>.
+            Cung cấp giải pháp pháp lý toàn diện, thực chiến và bảo vệ tối đa quyền lợi chính đáng cho người dân và doanh nghiệp.
+          </p>
+
+          <p class="font-serif italic text-sm text-[#D4AF37] mb-5 tracking-wide flex items-center gap-2">
+            <i class="fa-solid fa-scale-balanced text-xs opacity-80"></i>
+            <span>« Tận Tâm – Chính Trực – Thực Chiến – Hiệu Quả »</span>
+          </p>
+        </div>
+
+        <!-- Mạng xã hội -->
+        <div class="flex items-center gap-3 pt-2">
+          <a href="#" class="w-9 h-9 rounded-full bg-[#5B1313]/70 border border-[#D4AF37]/40 text-[#F1F5F9] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#4A0E17] hover:border-[#D4AF37] hover:scale-110 transition-all text-xs shadow-md" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-[#5B1313]/70 border border-[#D4AF37]/40 text-[#F1F5F9] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#4A0E17] hover:border-[#D4AF37] hover:scale-110 transition-all text-xs shadow-md" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-[#5B1313]/70 border border-[#D4AF37]/40 text-[#F1F5F9] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#4A0E17] hover:border-[#D4AF37] hover:scale-110 transition-all text-xs shadow-md" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cột 2: Trang chính (md:col-span-3) -->
+      <div class="md:col-span-3">
+        <h4 class="font-serif font-bold text-[#D4AF37] mb-5 text-sm tracking-wider uppercase flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+          TRANG CHÍNH
+        </h4>
+        <ul class="space-y-3 text-sm text-[#F1F5F9]">
+          <li>
+            <a href="index.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Trang Chủ
+            </a>
+          </li>
+          <li>
+            <a href="ban-tin.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Bản Tin Pháp Luật
+            </a>
+          </li>
+          <li>
+            <a href="bieu-mau.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Biểu Mẫu Tham Khảo
+            </a>
+          </li>
+          <li>
+            <a href="lien-he.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Liên Hệ Trực Tiếp
+            </a>
+          </li>
+          <li>
+            <a href="lien-he.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Đặt Lịch Tư Vấn
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Cột 3: Thông tin chi nhánh (md:col-span-4) -->
+      <div class="md:col-span-4">
+        <h4 class="font-serif font-bold text-[#D4AF37] mb-5 text-sm tracking-wider uppercase flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+          THÔNG TIN CHI NHÁNH
+        </h4>
+        <ul class="space-y-3.5 text-sm text-[#F1F5F9]">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-[#D4AF37] text-sm mt-1 flex-shrink-0"></i>
+            <span>Huyện Phù Cát, Tỉnh Bình Định</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-[#D4AF37] text-sm flex-shrink-0"></i>
+            <a href="tel:0987654321" class="hover:text-[#D4AF37] transition-colors font-medium">
+              Hotline: 0987 654 321
+            </a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-envelope text-[#D4AF37] text-sm flex-shrink-0"></i>
+            <a href="mailto:info@thaigialaw.vn" class="hover:text-[#D4AF37] transition-colors">
+              info@thaigialaw.vn
+            </a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-clock text-[#D4AF37] text-sm mt-1 flex-shrink-0"></i>
+            <div>
+              <p>Thứ 2 – Thứ 7: 07:30 – 17:30</p>
+              <p class="text-red-200/80 text-xs mt-0.5">Chủ nhật: Tiếp nhận theo lịch hẹn trước</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Dải phân cách & Bản quyền dưới đáy -->
+    <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent mb-6"></div>
+    <div class="text-center text-xs text-red-200/75 py-1">
+      <p>© 2026 CÔNG TY LUẬT TNHH THÁI GIA – CHI NHÁNH PHÙ CÁT (HAU LAW GROUP). All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TIỆN ÍCH NỔI (ZALO + HOTLINE)
+═══════════════════════════════════════════════════════════════ -->
+<div class="fixed bottom-6 right-5 z-50 flex flex-col items-center gap-3">
+
+  <!-- Zalo Floating Button -->
+  <div class="relative group">
+    <a href="https://zalo.me/0905000000" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo với Luật sư"
+       class="w-14 h-14 rounded-full flex items-center justify-center bg-white shadow-lg shadow-[#0068FF]/30 overflow-hidden transition-transform duration-200 hover:scale-110 cursor-pointer border border-[#0068FF]/20">
+      <img src="zalo.png" alt="Zalo" class="w-full h-full object-cover rounded-full" />
+    </a>
+    <div class="pulse-ring border-[#0068FF]/50"></div>
+    <span class="absolute right-[66px] top-1/2 -translate-y-1/2 whitespace-nowrap bg-slate-900 text-white text-xs font-medium px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition pointer-events-none shadow-xl border border-white/10">
+      Chat Zalo ngay
+    </span>
+  </div>
+
+  <!-- Hotline Floating Button -->
+  <div class="relative group">
+    <a href="tel:0987654321" aria-label="Gọi Hotline Luật sư"
+       class="float-btn bg-burgundy text-white border border-gold/40 shadow-lg shadow-burgundy/30">
+      <i class="fa-solid fa-phone-volume text-base transition-transform duration-200 group-hover:scale-110"></i>
+    </a>
+    <div class="pulse-ring border-burgundy/50"></div>
+    <span class="absolute right-[62px] top-1/2 -translate-y-1/2 whitespace-nowrap bg-slate-900 text-white text-xs font-medium px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition pointer-events-none shadow-xl border border-white/10">
+      Hotline: 0987 654 321
+    </span>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════════ -->
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuIcon.className = isOpen ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+  });
+
+  // Filter News
+  function filterNews(category, btn) {
+    document.querySelectorAll('.filter-tab-news').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+
+    const items = document.querySelectorAll('.news-item');
+    items.forEach(item => {
+      const itemCat = item.getAttribute('data-category');
+      if (category === 'all' || itemCat === category) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+
+  // Article Modal Popup
+  function openArticleModal(title, author, content) {
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-author').textContent = author;
+    document.getElementById('modal-body').textContent = content;
+    document.getElementById('article-modal').classList.remove('hidden');
+  }
+
+  function closeArticleModal() {
+    document.getElementById('article-modal').classList.add('hidden');
+  }
+
+  document.getElementById('article-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeArticleModal();
+    }
+  });
+</script>
+
+</body>
+</html>

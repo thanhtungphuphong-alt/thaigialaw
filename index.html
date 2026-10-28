@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Công ty Luật TNHH Thái Gia – Chi Nhánh Phù Cát | HAU LAW GROUP</title>
+  <meta name="description" content="Công ty Luật TNHH Thái Gia – Chi nhánh Phù Cát (HAU LAW GROUP). Luật sư Nguyễn Tiến Nguyên – Điểm tựa pháp lý vững chắc tại Bình Định và trên toàn quốc: Đất đai, Hôn nhân gia đình, Thừa kế, Dân sự, Hình sự, Doanh nghiệp." />
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans (Hỗ trợ tiếng Việt đầy đủ) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              DEFAULT: '#7F1D1D',
+              900: '#450a0a',
+              800: '#7F1D1D',
+              700: '#991b1b',
+              600: '#b91c1c',
+              50:  '#fef2f2',
+              100: '#fee2e2',
+            },
+            gold: {
+              DEFAULT: '#D4AF37',
+              light:   '#F3E5AB',
+              muted:   '#C5A880',
+              dark:    '#AA820A',
+            },
+            pearl: '#F8FAFC',
+          },
+          fontFamily: {
+            serif:    ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:     ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ── Base ── */
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FFFFFF;
+      color: #1E293B;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* ── Gold gradient text & lines ── */
+    .text-gold-grad {
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA820A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-burgundy-grad {
+      background: linear-gradient(135deg, #b91c1c 0%, #7F1D1D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gold-line {
+      width: 54px; height: 2px;
+      background: linear-gradient(90deg, #D4AF37, #F3E5AB, #D4AF37);
+      border-radius: 9999px;
+    }
+    .gold-line-full {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    }
+
+    /* ── Sticky Nav ── */
+    #navbar { transition: background .3s, box-shadow .3s; }
+    #navbar.scrolled {
+      background-color: rgba(255,255,255,.98) !important;
+      box-shadow: 0 4px 20px rgba(127,29,29,.08);
+    }
+
+    /* ── Cards ── */
+    .service-card {
+      border: 1px solid #ebdcb2;
+      border-radius: 10px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 10px rgba(127,29,29,.04);
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(127,29,29,.12);
+      border-color: #D4AF37;
+    }
+    .service-icon-box {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(212,175,55,.15), rgba(212,175,55,.03));
+      border: 1.5px solid rgba(212,175,55,.4);
+      transition: background .3s, border-color .3s;
+    }
+    .service-card:hover .service-icon-box {
+      background: linear-gradient(135deg, rgba(212,175,55,.3), rgba(212,175,55,.1));
+      border-color: #D4AF37;
+    }
+
+    .news-card-home {
+      border: 1px solid #ebdcb2;
+      border-radius: 10px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 10px rgba(127,29,29,.04);
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+    }
+    .news-card-home:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(127,29,29,.11);
+      border-color: #D4AF37;
+    }
+
+    /* ── Form ── */
+    .form-field {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(212,175,55,.35);
+      border-radius: 8px;
+      color: #1E293B;
+      font-size: .875rem;
+      padding: .75rem 1rem;
+      width: 100%;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .form-field:focus {
+      outline: none;
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 3px rgba(212,175,55,.18);
+    }
+    .form-field::placeholder { color: #94A3B8; }
+
+    /* ── Floating Buttons ── */
+    .float-btn {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(0,0,0,.22);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .float-btn:hover { transform: scale(1.12); box-shadow: 0 8px 26px rgba(0,0,0,.3); }
+
+    .pulse-ring {
+      position: absolute; inset: -4px;
+      border-radius: 50%;
+      border: 2px solid;
+      animation: pulse-out 2.2s ease-out infinite;
+    }
+    @keyframes pulse-out {
+      0%   { opacity: .65; transform: scale(1); }
+      100% { opacity: 0;   transform: scale(1.65); }
+    }
+
+    /* ── Scroll Reveal ── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s, transform .6s; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-left { opacity: 0; transform: translateX(-24px); transition: opacity .6s, transform .6s; }
+    .reveal-left.visible { opacity: 1; transform: none; }
+    .reveal-right { opacity: 0; transform: translateX(24px); transition: opacity .6s, transform .6s; }
+    .reveal-right.visible { opacity: 1; transform: none; }
+
+    /* Mobile nav */
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height .35s ease-in-out; }
+    #mobile-menu.open { max-height: 480px; }
+
+    /* Hero - Full Overlay with Company Background & Deep Burgundy Gradient */
+    #hero {
+      position: relative;
+      background-color: #23060B;
+    }
+    .hero-pattern {
+      background-image: 
+        linear-gradient(to right, rgba(212,175,55,0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212,175,55,0.07) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    /* ── 3D Gold & Chrome Typography ── */
+    .text-3d-gold {
+      background: linear-gradient(135deg, #FFF7D9 0%, #F5D77F 25%, #D4AF37 50%, #B3861B 75%, #FDE08B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 1px rgba(90, 50, 0, 0.75))
+              drop-shadow(0 6px 14px rgba(0, 0, 0, 0.8))
+              drop-shadow(0 10px 25px rgba(212, 175, 55, 0.4));
+      letter-spacing: 0.04em;
+    }
+
+    /* ── 3D Floating Glass Cards ── */
+    .stat-card-3d {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
+    }
+    .stat-card-3d:hover {
+      transform: translateY(-8px) scale(1.05);
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(212, 175, 55, 0.8);
+      box-shadow: 0 15px 30px rgba(212, 175, 55, 0.28), 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+    }
+    .stat-number-3d {
+      background: linear-gradient(135deg, #FFF9E6 0%, #F5D77F 35%, #D4AF37 70%, #AA7C11 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6)) drop-shadow(0 4px 12px rgba(212, 175, 55, 0.35));
+      display: inline-block;
+    }
+
+    /* ── 3D Buttons & Shine Animation ── */
+    .btn-gold-3d {
+      background: linear-gradient(180deg, #F5D77F 0%, #D4AF37 60%, #B89228 100%);
+      color: #1A0507;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35), 0 2px 0 #9E7A1C, inset 0 1px 1px rgba(255, 255, 255, 0.6);
+      transition: all 0.25s ease;
+    }
+    .btn-gold-3d:hover {
+      background: linear-gradient(180deg, #FFF0B8 0%, #E0BD4A 60%, #C49B2E 100%);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(212, 175, 55, 0.5), 0 3px 0 #9E7A1C, inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+    .btn-gold-3d:active {
+      transform: translateY(1px) scale(0.99);
+      box-shadow: 0 3px 10px rgba(212, 175, 55, 0.3), 0 1px 0 #9E7A1C;
+    }
+    .btn-gold-3d::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -100%;
+      width: 60%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+      transform: rotate(25deg);
+      pointer-events: none;
+      animation: goldShine 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes goldShine {
+      0%   { left: -100%; }
+      25%  { left: 160%; }
+      100% { left: 160%; }
+    }
+    .btn-glass-3d {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      transition: all 0.25s ease;
+    }
+    .btn-glass-3d:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(212, 175, 55, 0.9);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 15px rgba(212, 175, 55, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+    }
+    .lawyer-card-hero {
+      border: 1.5px solid rgba(212,175,55,0.35);
+      background: #FFFFFF;
+      box-shadow: 0 4px 20px rgba(127,29,29,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .lawyer-card-hero:hover {
+      transform: translateY(-6px);
+      border-color: #D4AF37;
+      box-shadow: 0 16px 40px rgba(127,29,29,0.14);
+    }
+    .lawyer-img-frame {
+      border: 1px solid rgba(212,175,55,0.6);
+      position: relative;
+    }
+    .lawyer-img-frame::before {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #F8FAFC; }
+    ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     1. HEADER & MENU ĐIỀU HƯỚNG (MULTI-PAGE)
+═══════════════════════════════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-gold/25">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo Brand (Sẵn sàng thay logo.png) -->
+      <a href="index.html" class="flex items-center gap-3.5 flex-shrink-0" aria-label="Trang chủ Thái Gia Law">
+        <!-- SVG Shield & Balance Icon -->
+        <div class="logo-wrap flex-shrink-0" title="Thay thế logo.png tại đây">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="23" cy="23" r="22" fill="#7F1D1D" stroke="#D4AF37" stroke-width="1.5"/>
+            <path d="M23 8 L34 13 L34 23 C34 29.5 28.5 34.5 23 37 C17.5 34.5 12 29.5 12 23 L12 13 Z"
+                  fill="none" stroke="#D4AF37" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M23 11.5 L31.5 15.5 L31.5 23 C31.5 28.2 27.5 32.5 23 34.5 C18.5 32.5 14.5 28.2 14.5 23 L14.5 15.5 Z"
+                  fill="rgba(212,175,55,0.08)"/>
+            <line x1="23" y1="18" x2="23" y2="28" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="17" y1="20" x2="29" y2="20" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M15 20 C14 21.5 14 23 15 24 L19 24 C20 23 20 21.5 19 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+            <path d="M27 20 C26 21.5 26 23 27 24 L31 24 C32 23 32 21.5 31 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+          </svg>
+        </div>
+
+        <!-- Brand Text -->
+        <div class="leading-tight">
+          <p class="font-serif font-bold text-burgundy text-sm sm:text-[15px] tracking-wide uppercase">
+            THAIGIA LAW
+          </p>
+          <p class="text-slate-500 text-[9.5px] tracking-wider uppercase font-semibold">
+            Chi Nhánh Phù Cát
+          </p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu (Multi-page) -->
+      <ul class="hidden lg:flex items-center gap-7 text-[.84rem] font-medium text-slate-700">
+        <li>
+          <a href="index.html" class="text-burgundy font-semibold border-b-2 border-burgundy pb-1">Trang Chủ</a>
+        </li>
+        <li>
+          <a href="ban-tin.html" class="hover:text-burgundy transition-colors pb-1">Bản Tin Pháp Luật</a>
+        </li>
+        <li>
+          <a href="bieu-mau.html" class="hover:text-burgundy transition-colors pb-1">Biểu Mẫu Tham Khảo</a>
+        </li>
+        <li>
+          <a href="lien-he.html" class="hover:text-burgundy transition-colors pb-1">Liên Hệ</a>
+        </li>
+      </ul>
+
+      <!-- CTA Buttons & Hotline -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:0987654321" class="flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-burgundy transition-colors">
+          <div class="w-7 h-7 rounded-full bg-burgundy-50 border border-burgundy/20 flex items-center justify-center text-burgundy text-xs">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <span>0987 654 321</span>
+        </a>
+        <a href="lien-he.html"
+           class="px-5 py-2.5 rounded-full bg-burgundy text-white font-semibold text-[.82rem] hover:bg-burgundy-700 transition shadow-md shadow-burgundy/20 border border-gold/30 flex items-center gap-1.5">
+          <i class="fa-solid fa-calendar-check text-gold text-xs"></i> Tư Vấn Ngay
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Mobile -->
+      <button id="menu-btn" class="lg:hidden text-burgundy hover:text-burgundy-700 focus:outline-none p-2" aria-label="Menu">
+        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="lg:hidden border-t border-gold/20">
+      <ul class="flex flex-col py-4 gap-1 text-sm font-medium text-slate-700">
+        <li><a href="index.html" class="block px-3 py-2 text-burgundy font-semibold rounded-lg bg-burgundy-50">Trang Chủ</a></li>
+        <li><a href="ban-tin.html" class="block px-3 py-2 hover:text-burgundy rounded-lg">Bản Tin Pháp Luật</a></li>
+        <li><a href="bieu-mau.html" class="block px-3 py-2 hover:text-burgundy rounded-lg">Biểu Mẫu Tham Khảo</a></li>
+        <li><a href="lien-he.html" class="block px-3 py-2 hover:text-burgundy rounded-lg">Liên Hệ</a></li>
+        <li class="pt-3 border-t border-slate-100 flex flex-col gap-2 mt-2">
+          <a href="tel:0987654321" class="flex items-center justify-center gap-2 py-2 text-sm font-semibold text-burgundy bg-burgundy-50 rounded-lg">
+            <i class="fa-solid fa-phone"></i> Hotline: 0987 654 321
+          </a>
+          <a href="lien-he.html" onclick="closeMenu()" class="py-2.5 text-center rounded-lg bg-burgundy text-white font-semibold text-sm border border-gold/30">
+            Tư Vấn Ngay
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     2. HERO SECTION (FULL OVERLAY - ẢNH CÔNG TY ẨN CHÌM DƯỚI LỚP ĐỎ TRẦM)
+═══════════════════════════════════════════════════════════════ -->
+<section id="hero" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 px-4 overflow-hidden text-white text-center select-none" style="perspective: 1000px;">
+  
+  <!-- 3D Parallax Background Layer (Lady Justice + Deep Burgundy Gradient + Grid) -->
+  <div id="hero-3d-bg" class="absolute -inset-8 bg-cover bg-center pointer-events-none transition-transform ease-out will-change-transform"
+       style="background: linear-gradient(150deg, rgba(127,29,29,0.88) 0%, rgba(74,14,23,0.92) 55%, rgba(35,6,11,0.95) 100%), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1800&auto=format&fit=crop&q=85') center/cover no-repeat; transform: scale(1.05);">
+    <!-- Gold grid pattern overlay -->
+    <div class="absolute inset-0 hero-pattern opacity-40"></div>
+    <!-- Vignette & depth lighting -->
+    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at center, transparent 35%, rgba(25,3,7,0.7) 100%);"></div>
+  </div>
+
+  <!-- Ambient light glow -->
+  <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- 3D Parallax Content Container -->
+  <div id="hero-3d-content" class="max-w-5xl mx-auto relative z-10 flex flex-col items-center will-change-transform" style="transform-style: preserve-3d;">
+
+    <!-- Badge trên cùng -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/50 bg-black/40 backdrop-blur-md text-gold-light text-xs font-semibold tracking-wide uppercase mb-7 shadow-lg shadow-black/40" style="transform: translateZ(25px);">
+      <span class="text-gold">✦</span>
+      <span>CÔNG TY LUẬT TNHH THÁI GIA – CHI NHÁNH PHÙ CÁT</span>
+      <span class="text-gold">✦</span>
+    </div>
+
+    <!-- H1 Tiêu đề uy nghiêm 3D Typography -->
+    <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-[1.24] tracking-wide uppercase mb-6 max-w-4xl" style="transform: translateZ(45px);">
+      <span class="block text-white tracking-wide drop-shadow-[0_10px_20px_rgba(0,0,0,0.85)]">
+        ĐIỂM TỰA PHÁP LÝ VỮNG CHẮC
+      </span>
+      <span class="block text-3d-gold tracking-wide mt-2 sm:mt-2.5">
+        BẢO VỆ QUYỀN LỢI TOÀN DIỆN
+      </span>
+    </h1>
+
+    <!-- Câu khẳng định vị thế ngắn gọn -->
+    <p class="text-[#F1F5F9] text-base sm:text-xl font-normal max-w-2xl mx-auto leading-relaxed mb-4 font-sans drop-shadow-md" style="transform: translateZ(35px);">
+      Giải pháp pháp lý thực chiến – Bản lĩnh tranh tụng – Bảo mật tuyệt đối.
+    </p>
+
+    <p class="font-serif text-[#D4AF37] text-sm sm:text-base tracking-wide mb-10 italic flex items-center justify-center gap-2.5 drop-shadow-sm" style="transform: translateZ(30px);">
+      <i class="fa-solid fa-scale-balanced text-gold text-xs"></i>
+      <span>Uy Tín – Chuyên Nghiệp – Tận Tâm – Hiệu Quả</span>
+      <i class="fa-solid fa-scale-balanced text-gold text-xs"></i>
+    </p>
+
+    <!-- Cặp nút bấm 3D đặt chính giữa cân đối -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto mb-14" style="transform: translateZ(55px);">
+      <a href="lien-he.html"
+         class="btn-gold-3d w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-xl font-bold text-sm active:scale-[0.98]">
+        <i class="fa-solid fa-calendar-check text-xs"></i>
+        <span>Đặt Lịch Tư Vấn Ngay</span>
+      </a>
+
+      <a href="#linh-vuc"
+         class="btn-glass-3d w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-white font-semibold text-sm active:scale-[0.98]">
+        <i class="fa-solid fa-compass text-gold text-xs"></i>
+        <span>Khám Phá Dịch Vụ</span>
+      </a>
+    </div>
+
+    <!-- 4 Ô Thống Kê 3D Floating Glass Cards -->
+    <div class="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-gold/30" style="transform: translateZ(40px);">
+      <div class="stat-card-3d py-4 sm:py-5 px-3 text-center">
+        <p class="font-serif text-2xl sm:text-4xl font-bold stat-number-3d mb-1">10+</p>
+        <p class="text-red-100/90 text-xs sm:text-sm font-medium">Năm Kinh Nghiệm</p>
+      </div>
+      <div class="stat-card-3d py-4 sm:py-5 px-3 text-center">
+        <p class="font-serif text-2xl sm:text-4xl font-bold stat-number-3d mb-1">500+</p>
+        <p class="text-red-100/90 text-xs sm:text-sm font-medium">Vụ Việc Thành Công</p>
+      </div>
+      <div class="stat-card-3d py-4 sm:py-5 px-3 text-center">
+        <p class="font-serif text-2xl sm:text-4xl font-bold stat-number-3d mb-1">30 Phút</p>
+        <p class="text-red-100/90 text-xs sm:text-sm font-medium">Phản Hồi Nhanh</p>
+      </div>
+      <div class="stat-card-3d py-4 sm:py-5 px-3 text-center">
+        <p class="font-serif text-2xl sm:text-4xl font-bold stat-number-3d mb-1">100%</p>
+        <p class="text-red-100/90 text-xs sm:text-sm font-medium">Bảo Mật Thông Tin</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CÂU TUYÊN NGÔN VỊ THẾ / KHẲNG ĐỊNH THƯƠNG HIỆU (STATEMENT SECTION)
+═══════════════════════════════════════════════════════════════ -->
+<section class="py-16 sm:py-20 px-4 bg-[#F8FAFC] border-y-2 border-gold/35 relative">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Premium Card Container Viền Kép Mạ Vàng -->
+    <div class="relative bg-[#FCFBF9] rounded-2xl border-2 border-gold/40 p-8 sm:p-12 text-center shadow-xl shadow-stone-200/50">
+      
+      <!-- Họa tiết cán cân công lý trang trí ở mép trên khung viền -->
+      <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white border-2 border-gold flex items-center justify-center text-gold shadow-md">
+        <i class="fa-solid fa-scale-balanced text-sm"></i>
+      </div>
+
+      <!-- Khung viền đôi mạ vàng mỏng tinh tế bên trong -->
+      <div class="border border-gold/20 rounded-xl p-6 sm:p-8 relative">
+
+        <!-- Dòng 1: Tên công ty LÀM NỔI BẬT VÀ TO LÊN -->
+        <h2 class="font-serif text-lg sm:text-xl md:text-2xl font-bold text-burgundy uppercase tracking-wider leading-snug max-w-2xl mx-auto">
+          CÔNG TY LUẬT TNHH THÁI GIA (HAU LAW GROUP) – CHI NHÁNH PHÙ CÁT
+        </h2>
+
+        <!-- Đường kẻ chỉ vàng gold nhỏ thanh mảnh -->
+        <div class="w-16 h-0.5 bg-gold mx-auto my-4 rounded-full"></div>
+
+        <!-- Dòng 2: Câu trích dẫn thu nhỏ lại thanh thoát, vừa mắt -->
+        <p class="font-serif italic text-base sm:text-lg text-slate-700 font-normal leading-relaxed max-w-2xl mx-auto">
+          « Chúng tôi không chỉ cung cấp dịch vụ pháp lý, chúng tôi bảo vệ công lý và đồng hành cùng sự an tâm của bạn trên từng chặng đường. »
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     3. GIỚI THIỆU & GIÁ TRỊ CỐT LÕI
+═══════════════════════════════════════════════════════════════ -->
+<section id="gioi-thieu" class="py-24 px-4 bg-white border-b border-gold/15">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+      <!-- Left Column: Image & Highlight Badge -->
+      <div class="reveal-left relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-burgundy/10 border border-gold/25">
+          <img
+            src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=800&auto=format&fit=crop&q=80"
+            alt="Văn phòng Luật sư Thái Gia - Chi nhánh Phù Cát"
+            class="w-full h-80 sm:h-[460px] object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-burgundy/80 via-transparent to-transparent"></div>
+
+          <div class="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-sm rounded-xl p-4 border border-gold/30 shadow-lg">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full border-2 border-gold bg-burgundy flex items-center justify-center text-gold flex-shrink-0 text-xl">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <div>
+                <p class="font-serif font-bold text-burgundy text-sm">LS. NGUYỄN TIẾN NGUYÊN</p>
+                <p class="text-slate-600 text-xs">Trưởng Chi nhánh Phù Cát – HAU LAW GROUP</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Story & Core Values -->
+      <div class="reveal-right">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-burgundy-50 border border-burgundy/15 text-burgundy text-xs font-bold uppercase tracking-wider mb-4">
+          <i class="fa-solid fa-circle-dot text-[9px]"></i> Về Chúng Tôi
+        </div>
+        <div class="gold-line mb-5"></div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-800 leading-tight mb-5 tracking-wide uppercase">
+          SỨ MỆNH BẢO VỆ CÔNG LÝ &amp;<br/>
+          <span class="text-burgundy-grad">QUYỀN LỢI KHÁCH HÀNG</span>
+        </h2>
+
+        <p class="text-slate-600 text-[.95rem] leading-relaxed mb-4">
+          <strong>Công ty Luật TNHH Thái Gia – Chi nhánh Phù Cát (thuộc HAU LAW GROUP)</strong> được thành lập với mục tiêu mang đến cho người dân, hộ kinh doanh và doanh nghiệp trên địa bàn huyện Phù Cát nói riêng và tỉnh Bình Định nói chung một dịch vụ pháp lý chuẩn mực, minh bạch và có chiều sâu thực chiến.
+        </p>
+
+        <p class="text-slate-600 text-[.95rem] leading-relaxed mb-8">
+          Chúng tôi không chỉ đại diện tranh tụng tại Tòa án mà còn là người cố vấn chiến lược, phân tích rủi ro từ gốc để bạn có được phương án bảo vệ quyền lợi an toàn và tiết kiệm nhất.
+        </p>
+
+        <!-- 4 Core Values -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl border border-gold/25 bg-pearl shadow-sm">
+            <div class="flex items-center gap-2.5 mb-1.5">
+              <div class="w-7 h-7 rounded-full bg-burgundy text-gold flex items-center justify-center text-xs flex-shrink-0">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <h3 class="font-semibold text-slate-800 text-sm">Tận Tâm Phục Vụ</h3>
+            </div>
+            <p class="text-slate-500 text-xs leading-relaxed">Luôn lắng nghe thấu đáo, đồng hành cùng khách hàng từ bước tư vấn sơ bộ đến khi vụ việc kết thúc.</p>
+          </div>
+
+          <div class="p-4 rounded-xl border border-gold/25 bg-pearl shadow-sm">
+            <div class="flex items-center gap-2.5 mb-1.5">
+              <div class="w-7 h-7 rounded-full bg-burgundy text-gold flex items-center justify-center text-xs flex-shrink-0">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <h3 class="font-semibold text-slate-800 text-sm">Chính Trực Tuyệt Đối</h3>
+            </div>
+            <p class="text-slate-500 text-xs leading-relaxed">Đánh giá vụ việc khách quan, trung thực về khả năng thành công và chi phí, không hứa hẹn viển vông.</p>
+          </div>
+
+          <div class="p-4 rounded-xl border border-gold/25 bg-pearl shadow-sm">
+            <div class="flex items-center gap-2.5 mb-1.5">
+              <div class="w-7 h-7 rounded-full bg-burgundy text-gold flex items-center justify-center text-xs flex-shrink-0">
+                <i class="fa-solid fa-gavel"></i>
+              </div>
+              <h3 class="font-semibold text-slate-800 text-sm">Bản Lĩnh Thực Chiến</h3>
+            </div>
+            <p class="text-slate-500 text-xs leading-relaxed">Kinh nghiệm giải quyết hàng trăm vụ án tranh chấp phức tạp tại Tòa án các cấp và cơ quan Nhà nước.</p>
+          </div>
+
+          <div class="p-4 rounded-xl border border-gold/25 bg-pearl shadow-sm">
+            <div class="flex items-center gap-2.5 mb-1.5">
+              <div class="w-7 h-7 rounded-full bg-burgundy text-gold flex items-center justify-center text-xs flex-shrink-0">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+              <h3 class="font-semibold text-slate-800 text-sm">Bảo Mật 100%</h3>
+            </div>
+            <p class="text-slate-500 text-xs leading-relaxed">Thông tin khách hàng và hồ sơ vụ việc được bảo vệ theo chế độ bí mật nghề nghiệp cao nhất.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     4. KHỐI LĨNH VỰC TRỌNG TÂM (6 CARD)
+═══════════════════════════════════════════════════════════════ -->
+<section id="linh-vuc" class="py-24 px-4 bg-pearl border-b border-gold/15">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-burgundy-50 border border-burgundy/15 text-burgundy text-xs font-bold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-circle-dot text-[9px]"></i> Lĩnh Vực Chuyên Môn
+      </div>
+      <div class="gold-line mx-auto mb-5"></div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-800 mb-4 tracking-wide uppercase">
+        LĨNH VỰC HOẠT ĐỘNG <span class="text-burgundy-grad">TRỌNG TÂM</span>
+      </h2>
+      <p class="text-slate-500 max-w-xl mx-auto text-[.93rem] leading-relaxed">
+        Giải quyết toàn diện các vướng mắc pháp lý phổ biến của người dân và doanh nghiệp với quy trình chuẩn mực và bảo vệ tối đa lợi ích.
+      </p>
+    </div>
+
+    <!-- Grid 6 Cards -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1: Đất đai -->
+      <div class="service-card p-6 flex flex-col justify-between reveal">
+        <div>
+          <div class="service-icon-box mb-4">
+            <i class="fa-solid fa-land-mine-on text-gold text-xl"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-slate-800 mb-2">Đất Đai &amp; Bất Động Sản</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Tư vấn giải quyết tranh chấp ranh giới, thừa kế nhà đất, cấp đổi sổ đỏ và khiếu nại quyết định thu hồi, bồi thường đất đai.
+          </p>
+        </div>
+        <a href="lien-he.html" class="inline-flex items-center justify-between text-xs font-semibold text-burgundy hover:text-gold-dark pt-3 border-t border-slate-100 transition-colors">
+          <span>Liên hệ tư vấn mảng này</span>
+          <i class="fa-solid fa-arrow-right text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Card 2: Hôn nhân -->
+      <div class="service-card p-6 flex flex-col justify-between reveal">
+        <div>
+          <div class="service-icon-box mb-4">
+            <i class="fa-solid fa-heart text-gold text-xl"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-slate-800 mb-2">Hôn Nhân &amp; Gia Đình</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Hỗ trợ ly hôn đơn phương, thuận tình nhanh gọn; bảo vệ quyền trực tiếp nuôi con và phân chia tài sản chung vợ chồng thỏa đáng.
+          </p>
+        </div>
+        <a href="lien-he.html" class="inline-flex items-center justify-between text-xs font-semibold text-burgundy hover:text-gold-dark pt-3 border-t border-slate-100 transition-colors">
+          <span>Liên hệ tư vấn mảng này</span>
+          <i class="fa-solid fa-arrow-right text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Card 3: Thừa kế -->
+      <div class="service-card p-6 flex flex-col justify-between reveal">
+        <div>
+          <div class="service-icon-box mb-4">
+            <i class="fa-solid fa-scroll text-gold text-xl"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-slate-800 mb-2">Thừa Kế &amp; Di Chúc</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Tư vấn lập di chúc hợp pháp, thủ tục khai nhận - từ chối di sản thừa kế và đại diện giải quyết tranh chấp phân chia tài sản tại Tòa án.
+          </p>
+        </div>
+        <a href="lien-he.html" class="inline-flex items-center justify-between text-xs font-semibold text-burgundy hover:text-gold-dark pt-3 border-t border-slate-100 transition-colors">
+          <span>Liên hệ tư vấn mảng này</span>
+          <i class="fa-solid fa-arrow-right text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Card 4: Dân sự -->
+      <div class="service-card p-6 flex flex-col justify-between reveal">
+        <div>
+          <div class="service-icon-box mb-4">
+            <i class="fa-solid fa-file-contract text-gold text-xl"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-slate-800 mb-2">Hợp Đồng &amp; Dân Sự</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Rà soát rủi ro hợp đồng đặt cọc, mua bán, vay mượn tài sản; đại diện đàm phán thu hồi nợ và khởi kiện bồi thường thiệt hại ngoài hợp đồng.
+          </p>
+        </div>
+        <a href="lien-he.html" class="inline-flex items-center justify-between text-xs font-semibold text-burgundy hover:text-gold-dark pt-3 border-t border-slate-100 transition-colors">
+          <span>Liên hệ tư vấn mảng này</span>
+          <i class="fa-solid fa-arrow-right text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Card 5: Hình sự -->
+      <div class="service-card p-6 flex flex-col justify-between reveal">
+        <div>
+          <div class="service-icon-box mb-4">
+            <i class="fa-solid fa-gavel text-gold text-xl"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-slate-800 mb-2">Bào Chữa Hình Sự</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Bào chữa cho bị can, bị cáo từ giai đoạn khởi tố, điều tra đến xét xử; bảo vệ quyền lợi hợp pháp cho người bị hại và đương sự liên quan.
+          </p>
+        </div>
+        <a href="lien-he.html" class="inline-flex items-center justify-between text-xs font-semibold text-burgundy hover:text-gold-dark pt-3 border-t border-slate-100 transition-colors">
+          <span>Liên hệ tư vấn mảng này</span>
+          <i class="fa-solid fa-arrow-right text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Card 6: Doanh nghiệp -->
+      <div class="service-card p-6 flex flex-col justify-between reveal">
+        <div>
+          <div class="service-icon-box mb-4">
+            <i class="fa-solid fa-building-columns text-gold text-xl"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-slate-800 mb-2">Pháp Lý Doanh Nghiệp</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">
+            Tư vấn thành lập, thay đổi đăng ký kinh doanh, pháp chế nội bộ lao động, hợp đồng thương mại và giải quyết tranh chấp giữa các thành viên góp vốn.
+          </p>
+        </div>
+        <a href="lien-he.html" class="inline-flex items-center justify-between text-xs font-semibold text-burgundy hover:text-gold-dark pt-3 border-t border-slate-100 transition-colors">
+          <span>Liên hệ tư vấn mảng này</span>
+          <i class="fa-solid fa-arrow-right text-[11px]"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ĐỘI NGŨ LUẬT SƯ & CỘNG SỰ PHỤ TRÁCH (2 CỘT CHO 2 LUẬT SƯ)
+═══════════════════════════════════════════════════════════════ -->
+<section id="doi-ngu" class="py-24 px-4 bg-white border-b border-gold/15">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-burgundy-50 border border-burgundy/15 text-burgundy text-xs font-bold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-user-tie text-[10px]"></i> Đội Ngũ Nhân Sự
+      </div>
+      <div class="gold-line mx-auto mb-4"></div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-800 mb-3 tracking-wide uppercase">
+        ĐỘI NGŨ LUẬT SƯ &amp; <span class="text-burgundy-grad">CỘNG SỰ PHỤ TRÁCH</span>
+      </h2>
+      <p class="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
+        Những chuyên gia pháp lý giàu kinh nghiệm thực chiến, cam kết bảo vệ tối đa quyền và lợi ích hợp pháp của bạn.
+      </p>
+    </div>
+
+    <!-- Grid 2 Cột Cân Xứng Cho 2 Luật Sư -->
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-10">
+
+      <!-- THẺ LUẬT SƯ 1: LS. NGUYỄN TIẾN NGUYÊN -->
+      <div class="lawyer-card-hero rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+        
+        <!-- Khung ảnh bo góc viền kép mạ vàng -->
+        <div class="w-40 sm:w-44 flex-shrink-0">
+          <div class="lawyer-img-frame rounded-xl overflow-hidden aspect-[3/4] bg-slate-900 shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&auto=format&fit=crop&q=85"
+              alt="Luật sư Nguyễn Tiến Nguyên - Trưởng Chi nhánh Phù Cát"
+              class="w-full h-full object-cover object-top hover:scale-105 transition duration-500" />
+          </div>
+          <div class="text-center mt-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full bg-burgundy-50 border border-gold/40 text-burgundy font-bold text-[10px] tracking-wide uppercase">
+              Chủ Trì Vụ Việc
+            </span>
+          </div>
+        </div>
+
+        <!-- Thông tin chi tiết Luật sư 1 -->
+        <div class="flex-1 flex flex-col justify-between h-full text-center sm:text-left">
+          <div>
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 mb-1">
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-800">LS. Nguyễn Tiến Nguyên</h3>
+            </div>
+            <p class="text-burgundy font-semibold text-xs sm:text-sm tracking-wide mb-3">
+              Trưởng Chi Nhánh Phù Cát / Luật Sư Điều Hành
+            </p>
+            <div class="w-12 h-0.5 bg-gold mb-4 mx-auto sm:mx-0"></div>
+
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Hơn 10 năm kinh nghiệm giải quyết các vụ án pháp lý phức tạp tại Tòa án các cấp tại Bình Định và khu vực lân cận, bản lĩnh tranh luận sắc sảo.
+            </p>
+
+            <!-- Chuyên môn trọng tâm -->
+            <div class="mb-5">
+              <p class="text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Chuyên môn trọng tâm:</p>
+              <div class="flex flex-wrap gap-1.5 justify-center sm:justify-start">
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Tranh chấp Đất đai</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Hôn nhân gia đình</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Dân sự</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Tranh tụng Tòa án</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nút đặt lịch -->
+          <div>
+            <a href="lien-he.html"
+               class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-2.5 rounded-lg bg-burgundy hover:bg-burgundy-700 text-white font-semibold text-xs transition shadow-md shadow-burgundy/15 border border-gold/30">
+              <i class="fa-solid fa-calendar-check text-gold text-xs"></i>
+              <span>Đặt Lịch Tư Vấn Trực Tiếp</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- THẺ LUẬT SƯ 2: CỘNG SỰ TIÊU BIỂU (DỄ THAY ĐỔI THÔNG TIN) -->
+      <div class="lawyer-card-hero rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+        
+        <!-- Khung ảnh bo góc viền kép mạ vàng -->
+        <div class="w-40 sm:w-44 flex-shrink-0">
+          <div class="lawyer-img-frame rounded-xl overflow-hidden aspect-[3/4] bg-slate-900 shadow-md">
+            <!-- Ảnh mẫu chuyên nghiệp sẵn sàng thay thế bằng anh-luat-su-2.jpg -->
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=85"
+              alt="Luật sư Cộng sự Tiêu biểu - HAU LAW GROUP"
+              class="w-full h-full object-cover object-top hover:scale-105 transition duration-500" />
+          </div>
+          <div class="text-center mt-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full bg-gold/15 border border-gold/40 text-gold-dark font-bold text-[10px] tracking-wide uppercase">
+              Cố Vấn Cấp Cao
+            </span>
+          </div>
+        </div>
+
+        <!-- Thông tin chi tiết Luật sư 2 -->
+        <div class="flex-1 flex flex-col justify-between h-full text-center sm:text-left">
+          <div>
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 mb-1">
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-800">Luật sư Cộng Sự Tiêu Biểu</h3>
+            </div>
+            <p class="text-burgundy font-semibold text-xs sm:text-sm tracking-wide mb-3">
+              Luật Sư Thành Viên / Cố Vấn Pháp Lý Cao Cấp
+            </p>
+            <div class="w-12 h-0.5 bg-gold mb-4 mx-auto sm:mx-0"></div>
+
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Chuyên gia tư vấn pháp lý cho các tập đoàn, doanh nghiệp vừa và nhỏ, giàu kinh nghiệm soạn thảo hợp đồng thương mại và bào chữa các vụ án hình sự trọng điểm.
+            </p>
+
+            <!-- Chuyên môn trọng tâm -->
+            <div class="mb-5">
+              <p class="text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Chuyên môn trọng tâm:</p>
+              <div class="flex flex-wrap gap-1.5 justify-center sm:justify-start">
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Doanh nghiệp</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Hợp đồng thương mại</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Bào chữa Hình sự</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Đầu tư kinh doanh</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nút đặt lịch -->
+          <div>
+            <a href="lien-he.html"
+               class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-2.5 rounded-lg bg-burgundy hover:bg-burgundy-700 text-white font-semibold text-xs transition shadow-md shadow-burgundy/15 border border-gold/30">
+              <i class="fa-solid fa-calendar-check text-gold text-xs"></i>
+              <span>Đặt Lịch Tư Vấn Trực Tiếp</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ── HÀNG ĐỘI NGŨ CHUYÊN VIÊN PHÁP LÝ (10 Ô TINH GỌN) ── -->
+    <div class="mt-16 pt-12 border-t border-gold/25">
+      
+      <!-- Tiêu đề phân mục -->
+      <h4 class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#7F1D1D] mb-6 flex items-center justify-center gap-3 text-center">
+        <span class="w-8 sm:w-12 h-[1px] bg-[#D4AF37]"></span>
+        <span>ĐỘI NGŨ CHUYÊN VIÊN PHÁP LÝ</span>
+        <span class="w-8 sm:w-12 h-[1px] bg-[#D4AF37]"></span>
+      </h4>
+
+      <!-- Lưới 10 ô: 5 cột x 2 hàng trên máy tính -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 my-6">
+        <!-- Chuyên viên 01 -->
+        <div class="bg-white rounded-xl p-4 text-center border border-[#D4AF37]/30 hover:border-gold hover:shadow-md transition duration-250 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&auto=format&fit=crop&q=80" alt="Chuyên viên 01" class="w-16 h-16 mx-auto rounded-full object-cover border-2 border-[#D4AF37] mb-2 shadow-sm" />
+          <h5 class="font-sans text-sm font-bold text-slate-800 leading-snug mb-1">Chuyên viên 01</h5>
+          <p class="text-xs text-[#7F1D1D] font-medium leading-none">Chuyên viên Pháp lý</p>
+        </div>
+        <!-- Chuyên viên 02 -->
+        <div class="bg-white rounded-xl p-4 text-center border border-[#D4AF37]/30 hover:border-gold hover:shadow-md transition duration-250 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" alt="Chuyên viên 02" class="w-16 h-16 mx-auto rounded-full object-cover border-2 border-[#D4AF37] mb-2 shadow-sm" />
+          <h5 class="font-sans text-sm font-bold text-slate-800 leading-snug mb-1">Chuyên viên 02</h5>
+          <p class="text-xs text-[#7F1D1D] font-medium leading-none">Chuyên viên Pháp lý</p>
+        </div>
+        <!-- Chuyên viên 03 -->
+        <div class="bg-white rounded-xl p-4 text-center border border-[#D4AF37]/30 hover:border-gold hover:shadow-md transition duration-250 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80" alt="Chuyên viên 03" class="w-16 h-16 mx-auto rounded-full object-cover border-2 border-[#D4AF37] mb-2 shadow-sm" />
+          <h5 class="font-sans text-sm font-bold text-slate-800 leading-snug mb-1">Chuyên viên 03</h5>
+          <p class="text-xs text-[#7F1D1D] font-medium leading-none">Chuyên viên Pháp lý</p>
+        </div>
+        <!-- Chuyên viên 04 -->
+        <div class="bg-white rounded-xl p-4 text-center border border-[#D4AF37]/30 hover:border-gold hover:shadow-md transition duration-250 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80" alt="Chuyên viên 04" class="w-16 h-16 mx-auto rounded-full object-cover border-2 border-[#D4AF37] mb-2 shadow-sm" />
+          <h5 class="font-sans text-sm font-bold text-slate-800 leading-snug mb-1">Chuyên viên 04</h5>
+          <p class="text-xs text-[#7F1D1D] font-medium leading-none">Chuyên viên Pháp lý</p>
+        </div>
+        <!-- Chuyên viên 05 -->
+        <div class="bg-white rounded-xl p-4 text-center border border-[#D4AF37]/30 hover:border-gold hover:shadow-md transition duration-250 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&auto=format&fit=crop&q=80" alt="Chuyên viên 05" class="w-16 h-16 mx-auto rounded-full object-cover border-2 border-[#D4AF37] mb-2 shadow-sm" />
+          <h5 class="font-sans text-sm font-bold text-slate-800 leading-snug mb-1">Chuyên viên 05</h5>
+          <p class="text-xs text-[#7F1D1D] font-medium leading-none">Chuyên viên Pháp lý</p>
+        </div>
+        <!-- Chuyên viên 06 -->
+        <div class="bg-white rounded-xl p-4 text-center border border-[#D4AF37]/30 hover:border-gold hover:shadow-md transition duration-250 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&auto=format&fit=crop&q=80" alt="Chuyên viên 06" class="w-16 h-16 mx-auto rounded-full object-cover border-2 border-[#D4AF37] mb-2 shadow-sm" />
+          <h5 class="font-sans text-sm font-bold text-slate-800 leading-snug mb-1">Chuyên viên 06</h5>
+          <p class="text-xs text-[#7F1D1D] font-medium leading-none">Chuyên viên Pháp lý</p>
+        </div>
+        <!-- Chuyên viên 07 -->
+        <div class="bg-white rounded-xl p-4 text-center border border-[#D4AF37]/30 hover:border-gold hover:shadow-md transition duration-250 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&auto=format&fit=crop&q=80" alt="Chuyên viên 07" class="w-16 h-16 mx-auto rounded-full object-cover border-2 border-[#D4AF37] mb-2 shadow-sm" />
+          <h5 class="font-sans text-sm font-bold text-slate-800 leading-snug mb-1">Chuyên viên 07</h5>
+          <p class="text-xs text-[#7F1D1D] font-medium leading-none">Chuyên viên Pháp lý</p>
+        </div>
+        <!-- Chuyên viên 08 -->
+        <div class="bg-white rounded-xl p-4 text-center border border-[#D4AF37]/30 hover:border-gold hover:shadow-md transition duration-250 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&auto=format&fit=crop&q=80" alt="Chuyên viên 08" class="w-16 h-16 mx-auto rounded-full object-cover border-2 border-[#D4AF37] mb-2 shadow-sm" />
+          <h5 class="font-sans text-sm font-bold text-slate-800 leading-snug mb-1">Chuyên viên 08</h5>
+          <p class="text-xs text-[#7F1D1D] font-medium leading-none">Chuyên viên Pháp lý</p>
+        </div>
+        <!-- Chuyên viên 09 -->
+        <div class="bg-white rounded-xl p-4 text-center border border-[#D4AF37]/30 hover:border-gold hover:shadow-md transition duration-250 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=300&auto=format&fit=crop&q=80" alt="Chuyên viên 09" class="w-16 h-16 mx-auto rounded-full object-cover border-2 border-[#D4AF37] mb-2 shadow-sm" />
+          <h5 class="font-sans text-sm font-bold text-slate-800 leading-snug mb-1">Chuyên viên 09</h5>
+          <p class="text-xs text-[#7F1D1D] font-medium leading-none">Chuyên viên Pháp lý</p>
+        </div>
+        <!-- Chuyên viên 10 -->
+        <div class="bg-white rounded-xl p-4 text-center border border-[#D4AF37]/30 hover:border-gold hover:shadow-md transition duration-250 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop&q=80" alt="Chuyên viên 10" class="w-16 h-16 mx-auto rounded-full object-cover border-2 border-[#D4AF37] mb-2 shadow-sm" />
+          <h5 class="font-sans text-sm font-bold text-slate-800 leading-snug mb-1">Chuyên viên 10</h5>
+          <p class="text-xs text-[#7F1D1D] font-medium leading-none">Chuyên viên Pháp lý</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     5. KHỐI ĐIỂM TIN PHÁP LUẬT TIÊU BIỂU (3 BÀI VIẾT)
+═══════════════════════════════════════════════════════════════ -->
+<section id="tin-tuc" class="py-24 px-4 bg-white border-b border-gold/15">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Header Section -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-burgundy-50 border border-burgundy/15 text-burgundy text-xs font-bold uppercase tracking-wider mb-4">
+          <i class="fa-solid fa-newspaper text-[9px]"></i> Kiến Thức Thực Chiến
+        </div>
+        <div class="gold-line mb-4"></div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-800 tracking-wide uppercase whitespace-nowrap">
+          BẢN TIN <span class="text-burgundy-grad">PHÁP LUẬT</span>
+        </h2>
+      </div>
+      <a href="ban-tin.html"
+         class="mt-4 md:mt-0 inline-flex items-center gap-2 text-sm font-semibold text-burgundy hover:text-gold-dark transition-colors">
+        Xem tất cả bài viết <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+
+    <!-- 3 News Cards -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 mb-12">
+
+      <!-- Bài 1: Đất đai -->
+      <article class="news-card-home overflow-hidden flex flex-col reveal">
+        <div class="relative h-44 overflow-hidden bg-slate-100">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&auto=format&fit=crop&q=80"
+               alt="Tranh chấp ranh giới đất đai"
+               class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-burgundy/90 text-gold-light text-[11px] font-semibold tracking-wider border border-gold/30">
+            Đất Đai
+          </span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 text-xs text-slate-400 mb-2.5">
+              <span><i class="fa-regular fa-calendar text-gold mr-1"></i> 26/10/2026</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock text-gold mr-1"></i> 5 phút đọc</span>
+            </div>
+            <h3 class="font-serif text-base font-bold text-slate-800 leading-snug mb-2.5 hover:text-burgundy transition-colors">
+              <a href="ban-tin.html">Những lưu ý sống còn khi giải quyết tranh chấp ranh giới đất đai năm 2026</a>
+            </h3>
+            <p class="text-slate-500 text-xs leading-relaxed mb-4">
+              Hướng dẫn toàn diện về trình tự hòa giải tại UBND cấp xã, đo đạc hiện trạng và thu thập chứng cứ nguồn gốc sử dụng đất tránh thất thế tại Tòa.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex justify-end items-center text-xs">
+            <a href="ban-tin.html" class="font-sans inline-flex items-center gap-1 font-semibold text-[#7F1D1D] hover:text-[#D4AF37] transition-colors">
+              Đọc bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bài 2: Hôn nhân -->
+      <article class="news-card-home overflow-hidden flex flex-col reveal">
+        <div class="relative h-44 overflow-hidden bg-slate-100">
+          <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=700&auto=format&fit=crop&q=80"
+               alt="Giành quyền nuôi con khi ly hôn"
+               class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-burgundy/90 text-gold-light text-[11px] font-semibold tracking-wider border border-gold/30">
+            Hôn Nhân
+          </span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 text-xs text-slate-400 mb-2.5">
+              <span><i class="fa-regular fa-calendar text-gold mr-1"></i> 24/10/2026</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock text-gold mr-1"></i> 6 phút đọc</span>
+            </div>
+            <h3 class="font-serif text-base font-bold text-slate-800 leading-snug mb-2.5 hover:text-burgundy transition-colors">
+              <a href="ban-tin.html">Hồ sơ và chứng cứ quan trọng để giành quyền trực tiếp nuôi con khi ly hôn</a>
+            </h3>
+            <p class="text-slate-500 text-xs leading-relaxed mb-4">
+              Phân tích các yếu tố Tòa án xem xét: điều kiện kinh tế, thời gian chăm sóc, nhân thân đạo đức và nguyện vọng của con từ đủ 7 tuổi trở lên.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex justify-end items-center text-xs">
+            <a href="ban-tin.html" class="font-sans inline-flex items-center gap-1 font-semibold text-[#7F1D1D] hover:text-[#D4AF37] transition-colors">
+              Đọc bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bài 3: Thừa kế -->
+      <article class="news-card-home overflow-hidden flex flex-col reveal">
+        <div class="relative h-44 overflow-hidden bg-slate-100">
+          <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=700&auto=format&fit=crop&q=80"
+               alt="Phân chia di sản thừa kế"
+               class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-burgundy/90 text-gold-light text-[11px] font-semibold tracking-wider border border-gold/30">
+            Thừa Kế
+          </span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 text-xs text-slate-400 mb-2.5">
+              <span><i class="fa-regular fa-calendar text-gold mr-1"></i> 22/10/2026</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock text-gold mr-1"></i> 4 phút đọc</span>
+            </div>
+            <h3 class="font-serif text-base font-bold text-slate-800 leading-snug mb-2.5 hover:text-burgundy transition-colors">
+              <a href="ban-tin.html">Thủ tục khai nhận và phân chia di sản thừa kế theo pháp luật khi không có di chúc</a>
+            </h3>
+            <p class="text-slate-500 text-xs leading-relaxed mb-4">
+              Xác định hàng thừa kế theo Bộ luật Dân sự, hồ sơ niêm yết công khai tại UBND xã và thủ tục phân chia nhà đất không xảy ra tranh cãi.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex justify-end items-center text-xs">
+            <a href="ban-tin.html" class="font-sans inline-flex items-center gap-1 font-semibold text-[#7F1D1D] hover:text-[#D4AF37] transition-colors">
+              Đọc bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Nút lớn dẫn sang trang tin tức -->
+    <div class="text-center reveal">
+      <a href="ban-tin.html"
+         class="inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full bg-burgundy text-white font-semibold text-sm hover:bg-burgundy-700 transition shadow-lg shadow-burgundy/15 border border-gold/30">
+        <span>Xem Tất Cả Bản Tin Pháp Luật</span>
+        <i class="fa-solid fa-arrow-right text-gold"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     6. KHỐI GIỚI THIỆU BIỂU MẪU PHÁP LÝ (BANNER DẪN SANG TRANG)
+═══════════════════════════════════════════════════════════════ -->
+<section id="bieu-mau-banner" class="py-20 px-4 bg-burgundy relative overflow-hidden">
+  <!-- Subtle gold grid pattern -->
+  <div class="absolute inset-0 opacity-5" style="background-image:repeating-linear-gradient(45deg,#D4AF37 0,#D4AF37 1px,transparent 0,transparent 50%);background-size:24px 24px;"></div>
+
+  <div class="relative max-w-6xl mx-auto">
+    <div class="bg-gradient-to-r from-burgundy-900/90 to-burgundy-800/90 rounded-2xl border-2 border-gold/40 p-8 sm:p-12 shadow-2xl backdrop-blur-sm">
+      <div class="grid lg:grid-cols-3 gap-8 items-center">
+
+        <!-- Left: Text info -->
+        <div class="lg:col-span-2 reveal-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/15 border border-gold/30 text-gold-light text-xs font-bold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-file-shield text-[10px]"></i> Thư Viện Văn Bản Chuẩn Hóa
+          </div>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3 leading-snug tracking-wide uppercase">
+            HỆ THỐNG BIỂU MẪU ĐƠN <span class="text-gold-grad">PHÁP LÝ CHUẨN</span>
+          </h2>
+          <p class="text-red-100/80 text-sm leading-relaxed mb-6">
+            Hơn 50+ mẫu đơn khởi kiện tranh chấp đất đai, đơn ly hôn, văn bản thỏa thuận phân chia di sản, hợp đồng đặt cọc và đơn khiếu nại hành chính được các Luật sư của THAIGIA LAW GROUP rà soát theo quy định pháp luật mới nhất.
+          </p>
+
+          <!-- Feature badges -->
+          <div class="flex flex-wrap gap-3">
+            <span class="px-3 py-1 rounded-full bg-white/10 text-white text-xs border border-white/20 flex items-center gap-1.5">
+              <i class="fa-solid fa-check text-gold text-[10px]"></i> Định dạng Word (.DOCX) dễ chỉnh sửa
+            </span>
+            <span class="px-3 py-1 rounded-full bg-white/10 text-white text-xs border border-white/20 flex items-center gap-1.5">
+              <i class="fa-solid fa-check text-gold text-[10px]"></i> Kèm hướng dẫn điền chi tiết
+            </span>
+            <span class="px-3 py-1 rounded-full bg-white/10 text-white text-xs border border-white/20 flex items-center gap-1.5">
+              <i class="fa-solid fa-check text-gold text-[10px]"></i> Tải trực tiếp không cần đăng ký
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: Button CTA -->
+        <div class="text-center lg:text-right reveal-right">
+          <a href="bieu-mau.html"
+             class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gold text-burgundy font-bold text-sm hover:bg-gold-light transition shadow-xl shadow-gold/25 border border-gold-dark/40 w-full sm:w-auto">
+            <span>Truy Cập Kho Biểu Mẫu</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </a>
+          <p class="text-red-100/60 text-xs mt-3">Miễn phí 100% · Cập nhật liên tục</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     7. KHỐI TIẾP NHẬN THÔNG TIN TƯ VẤN (LEAD FORM)
+═══════════════════════════════════════════════════════════════ -->
+<section id="tu-van" class="py-24 px-4 bg-pearl border-b border-gold/15">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="text-center mb-14 reveal">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-burgundy-50 border border-burgundy/15 text-burgundy text-xs font-bold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-envelope-open-text text-[9px]"></i> Tiếp Nhận Thông Tin
+      </div>
+      <div class="gold-line mx-auto mb-5"></div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-800 mb-4 tracking-wide uppercase">
+        BẠN CẦN TƯ VẤN <span class="text-burgundy-grad">VẤN ĐỀ PHÁP LÝ RIÊNG CỦA MÌNH?</span>
+      </h2>
+      <p class="text-slate-500 max-w-xl mx-auto text-[.93rem] leading-relaxed">
+        Hãy để lại sơ bộ thông tin vụ việc, Luật sư của chúng tôi sẽ chủ động liên hệ lại trong vòng <strong class="text-burgundy">30 phút</strong> để tư vấn giải pháp.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-10 items-start">
+
+      <!-- Left 2 Cols: Cam kết & Thông tin liên hệ nhanh -->
+      <div class="lg:col-span-2 reveal-left">
+
+        <div class="bg-burgundy text-white rounded-xl p-6 mb-5 border border-gold/30 shadow-md">
+          <h3 class="font-serif text-xl font-bold mb-2">Cam Kết Bảo Mật</h3>
+          <p class="text-red-100/80 text-xs leading-relaxed mb-4">
+            Mọi thông tin danh tính, số điện thoại và nội dung vụ việc của khách hàng được bảo vệ theo nguyên tắc bảo mật nghề nghiệp của Luật sư, tuyệt đối không tiết lộ cho bên thứ ba.
+          </p>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="space-y-3.5">
+          <div class="p-4 rounded-xl bg-white border border-gold/25 shadow-sm flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-full bg-burgundy-50 border border-burgundy/20 flex items-center justify-center text-burgundy text-sm flex-shrink-0">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-slate-800 text-sm">Phản Hồi Thần Tốc</p>
+              <p class="text-slate-500 text-xs mt-0.5">Liên hệ lại trong 30 phút trong giờ hành chính.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-gold/25 shadow-sm flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-full bg-burgundy-50 border border-burgundy/20 flex items-center justify-center text-burgundy text-sm flex-shrink-0">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-slate-800 text-sm">Tư Vấn Bước Đầu Miễn Phí</p>
+              <p class="text-slate-500 text-xs mt-0.5">Đánh giá nhanh tình trạng pháp lý và phương hướng giải quyết.</p>
+            </div>
+          </div>
+
+          <!-- Hotline Direct Card -->
+          <div class="p-5 rounded-xl bg-gradient-to-br from-burgundy-800 to-burgundy border border-gold/30 text-white shadow-md">
+            <p class="text-gold text-xs font-bold uppercase tracking-wider mb-1">Hotline Khẩn Cấp (24/7)</p>
+            <a href="tel:0987654321" class="font-serif text-2xl font-bold text-white hover:text-gold transition">
+              0987 654 321
+            </a>
+            <p class="text-red-100/70 text-xs mt-1">Trực tiếp: LS. Nguyễn Tiến Nguyên</p>
+          </div>
+
+          <!-- Address -->
+          <div class="p-4 rounded-xl bg-white border border-gold/25 shadow-sm flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-full bg-burgundy-50 border border-burgundy/20 flex items-center justify-center text-burgundy text-sm flex-shrink-0">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-slate-800 text-sm">Trụ Sở Chi Nhánh</p>
+              <p class="text-slate-500 text-xs mt-0.5">Huyện Phù Cát, Tỉnh Bình Định</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right 3 Cols: Form Form -->
+      <div class="lg:col-span-3 reveal-right">
+        <form id="home-lead-form" onsubmit="handleLeadSubmit(event)"
+              class="bg-white rounded-2xl border border-gold/30 shadow-xl shadow-burgundy/5 overflow-hidden">
+
+          <div class="bg-gradient-to-r from-burgundy-800 to-burgundy px-7 py-4 border-b border-gold/25">
+            <h3 class="font-serif text-lg font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-file-signature text-gold"></i>
+              Phiếu Đăng Ký Tư Vấn Trực Tuyến
+            </h3>
+            <p class="text-red-100/75 text-xs mt-0.5">Bảo mật thông tin theo tiêu chuẩn Luật sư Việt Nam</p>
+          </div>
+
+          <div class="p-6 sm:p-7">
+            <!-- Row 1: Name & Phone -->
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-slate-700 text-xs font-semibold uppercase tracking-wide mb-1.5">
+                  Họ và tên khách hàng <span class="text-burgundy">*</span>
+                </label>
+                <input type="text" required placeholder="Ví dụ: Nguyễn Văn A" class="form-field" />
+              </div>
+              <div>
+                <label class="block text-slate-700 text-xs font-semibold uppercase tracking-wide mb-1.5">
+                  Số điện thoại liên hệ <span class="text-burgundy">*</span>
+                </label>
+                <input type="tel" required placeholder="Ví dụ: 0912 345 678" class="form-field" />
+              </div>
+            </div>
+
+            <!-- Row 2: Service Selection -->
+            <div class="mb-4">
+              <label class="block text-slate-700 text-xs font-semibold uppercase tracking-wide mb-1.5">
+                Chọn lĩnh vực cần hỗ trợ <span class="text-burgundy">*</span>
+              </label>
+              <select required class="form-field bg-white cursor-pointer">
+                <option value="" disabled selected>-- Chọn lĩnh vực pháp lý --</option>
+                <option value="dat-dai">Tranh chấp Đất đai &amp; Bất động sản</option>
+                <option value="hon-nhan">Hôn nhân &amp; Ly hôn (Con cái, Tài sản)</option>
+                <option value="thua-ke">Thừa kế &amp; Khai nhận Di sản</option>
+                <option value="hop-dong">Hợp đồng Đặt cọc &amp; Dân sự</option>
+                <option value="hinh-su">Bào chữa Hình sự</option>
+                <option value="doanh-nghiep">Tư vấn Doanh nghiệp &amp; Thương mại</option>
+                <option value="khac">Lĩnh vực pháp lý khác</option>
+              </select>
+            </div>
+
+            <!-- Row 3: Case summary -->
+            <div class="mb-5">
+              <label class="block text-slate-700 text-xs font-semibold uppercase tracking-wide mb-1.5">
+                Nội dung sơ bộ vụ việc <span class="text-burgundy">*</span>
+              </label>
+              <textarea required rows="4" placeholder="Mô tả tóm tắt sự việc, tài liệu hiện có và nguyện vọng của bạn để Luật sư nắm trước..."
+                        class="form-field resize-none leading-relaxed"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+                    class="w-full py-3.5 rounded-xl font-serif font-bold text-sm tracking-wide uppercase
+                           bg-burgundy text-white border-2 border-gold/40
+                           hover:bg-burgundy-700 hover:border-gold hover:shadow-lg hover:shadow-burgundy/20
+                           active:scale-[.99] transition-all duration-200 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane text-gold"></i>
+              Gửi Yêu Cầu Tư Vấn Bảo Mật
+            </button>
+
+            <p class="text-slate-400 text-xs text-center mt-3">
+              <i class="fa-solid fa-shield-halved text-gold mr-1"></i>
+              Thông tin của bạn luôn được cam kết bảo mật 100%.
+            </p>
+          </div>
+        </form>
+
+        <!-- Success Toast -->
+        <div id="home-lead-success" class="hidden mt-4 p-4 rounded-xl bg-green-50 border border-green-200 text-green-700 text-sm flex items-start gap-3">
+          <i class="fa-solid fa-circle-check text-green-500 text-lg flex-shrink-0 mt-0.5"></i>
+          <div>
+            <p class="font-semibold">Đã gửi yêu cầu tư vấn thành công!</p>
+            <p class="text-green-600 text-xs mt-0.5">Luật sư Nguyễn Tiến Nguyên sẽ liên hệ với bạn trong vòng 30 phút. Xin cảm ơn!</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     8. FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer class="bg-gradient-to-b from-[#4A0E17] via-[#3E0B13] to-[#30080E] border-t-2 border-[#D4AF37]/35 pt-16 pb-8 px-4 text-[#E2E8F0] relative overflow-hidden">
+    <!-- Watermark Logo khiên cán cân ẩn chìm dưới nền Footer -->
+  <div class="absolute right-[-40px] sm:right-4 md:right-[15%] lg:right-[20%] top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 opacity-[0.07] flex items-center justify-center" aria-hidden="true">
+    <svg width="480" height="480" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] md:w-[480px] md:h-[480px]">
+      <circle cx="23" cy="23" r="22" stroke="#D4AF37" stroke-width="1.2"/>
+      <path d="M23 8 L34 13 L34 23 C34 29.5 28.5 34.5 23 37 C17.5 34.5 12 29.5 12 23 L12 13 Z"
+            fill="none" stroke="#D4AF37" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M23 11.5 L31.5 15.5 L31.5 23 C31.5 28.2 27.5 32.5 23 34.5 C18.5 32.5 14.5 28.2 14.5 23 L14.5 15.5 Z"
+            fill="#D4AF37" fill-opacity="0.25"/>
+      <line x1="23" y1="18" x2="23" y2="28" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="17" y1="20" x2="29" y2="20" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M15 20 C14 21.5 14 23 15 24 L19 24 C20 23 20 21.5 19 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+      <path d="M27 20 C26 21.5 26 23 27 24 L31 24 C32 23 32 21.5 31 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 mb-12">
+
+      <!-- Cột 1: Thương hiệu & Tôn chỉ (md:col-span-5) -->
+      <div class="md:col-span-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3.5 mb-4">
+            <svg width="44" height="44" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+              <circle cx="23" cy="23" r="22" fill="#7F1D1D" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M23 8 L34 13 L34 23 C34 29.5 28.5 34.5 23 37 C17.5 34.5 12 29.5 12 23 L12 13 Z"
+                    fill="none" stroke="#D4AF37" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M23 11.5 L31.5 15.5 L31.5 23 C31.5 28.2 27.5 32.5 23 34.5 C18.5 32.5 14.5 28.2 14.5 23 L14.5 15.5 Z"
+                    fill="rgba(212,175,55,0.12)"/>
+              <line x1="23" y1="18" x2="23" y2="28" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="17" y1="20" x2="29" y2="20" stroke="#F3E5AB" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M15 20 C14 21.5 14 23 15 24 L19 24 C20 23 20 21.5 19 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+              <path d="M27 20 C26 21.5 26 23 27 24 L31 24 C32 23 32 21.5 31 20" fill="none" stroke="#F3E5AB" stroke-width="1"/>
+            </svg>
+            <div>
+              <p class="font-serif font-bold text-[#D4AF37] text-base tracking-wider uppercase">THAIGIA LAW</p>
+              <p class="text-red-200/85 text-[10px] tracking-widest uppercase">Chi Nhánh Phù Cát – HAU LAW GROUP</p>
+            </div>
+          </div>
+
+          <p class="text-[#E2E8F0] text-sm leading-relaxed mb-4 max-w-md">
+            <strong class="text-white font-semibold">CÔNG TY LUẬT TNHH THÁI GIA – CHI NHÁNH PHÙ CÁT</strong>.
+            Cung cấp giải pháp pháp lý toàn diện, thực chiến và bảo vệ tối đa quyền lợi chính đáng cho người dân và doanh nghiệp.
+          </p>
+
+          <p class="font-serif italic text-sm text-[#D4AF37] mb-5 tracking-wide flex items-center gap-2">
+            <i class="fa-solid fa-scale-balanced text-xs opacity-80"></i>
+            <span>« Tận Tâm – Chính Trực – Thực Chiến – Hiệu Quả »</span>
+          </p>
+        </div>
+
+        <!-- Mạng xã hội -->
+        <div class="flex items-center gap-3 pt-2">
+          <a href="#" class="w-9 h-9 rounded-full bg-[#5B1313]/70 border border-[#D4AF37]/40 text-[#F1F5F9] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#4A0E17] hover:border-[#D4AF37] hover:scale-110 transition-all text-xs shadow-md" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-[#5B1313]/70 border border-[#D4AF37]/40 text-[#F1F5F9] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#4A0E17] hover:border-[#D4AF37] hover:scale-110 transition-all text-xs shadow-md" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-[#5B1313]/70 border border-[#D4AF37]/40 text-[#F1F5F9] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#4A0E17] hover:border-[#D4AF37] hover:scale-110 transition-all text-xs shadow-md" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cột 2: Trang chính (md:col-span-3) -->
+      <div class="md:col-span-3">
+        <h4 class="font-serif font-bold text-[#D4AF37] mb-5 text-sm tracking-wider uppercase flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+          TRANG CHÍNH
+        </h4>
+        <ul class="space-y-3 text-sm text-[#F1F5F9]">
+          <li>
+            <a href="index.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Trang Chủ
+            </a>
+          </li>
+          <li>
+            <a href="ban-tin.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Bản Tin Pháp Luật
+            </a>
+          </li>
+          <li>
+            <a href="bieu-mau.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Biểu Mẫu Tham Khảo
+            </a>
+          </li>
+          <li>
+            <a href="lien-he.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Liên Hệ Trực Tiếp
+            </a>
+          </li>
+          <li>
+            <a href="lien-he.html" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#D4AF37]/70"></i> Đặt Lịch Tư Vấn
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Cột 3: Thông tin chi nhánh (md:col-span-4) -->
+      <div class="md:col-span-4">
+        <h4 class="font-serif font-bold text-[#D4AF37] mb-5 text-sm tracking-wider uppercase flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+          THÔNG TIN CHI NHÁNH
+        </h4>
+        <ul class="space-y-3.5 text-sm text-[#F1F5F9]">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-[#D4AF37] text-sm mt-1 flex-shrink-0"></i>
+            <span>Huyện Phù Cát, Tỉnh Bình Định</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-[#D4AF37] text-sm flex-shrink-0"></i>
+            <a href="tel:0987654321" class="hover:text-[#D4AF37] transition-colors font-medium">
+              Hotline: 0987 654 321
+            </a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-envelope text-[#D4AF37] text-sm flex-shrink-0"></i>
+            <a href="mailto:info@thaigialaw.vn" class="hover:text-[#D4AF37] transition-colors">
+              info@thaigialaw.vn
+            </a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-clock text-[#D4AF37] text-sm mt-1 flex-shrink-0"></i>
+            <div>
+              <p>Thứ 2 – Thứ 7: 07:30 – 17:30</p>
+              <p class="text-red-200/80 text-xs mt-0.5">Chủ nhật: Tiếp nhận theo lịch hẹn trước</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Dải phân cách & Bản quyền dưới đáy -->
+    <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent mb-6"></div>
+    <div class="text-center text-xs text-red-200/75 py-1">
+      <p>© 2026 CÔNG TY LUẬT TNHH THÁI GIA – CHI NHÁNH PHÙ CÁT (HAU LAW GROUP). All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TIỆN ÍCH NỔI (ZALO + HOTLINE)
+═══════════════════════════════════════════════════════════════ -->
+<div class="fixed bottom-6 right-5 z-50 flex flex-col items-center gap-3">
+
+  <!-- Zalo Floating Button -->
+  <div class="relative group">
+    <a href="https://zalo.me/0905000000" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo với Luật sư"
+       class="w-14 h-14 rounded-full flex items-center justify-center bg-white shadow-lg shadow-[#0068FF]/30 overflow-hidden transition-transform duration-200 hover:scale-110 cursor-pointer border border-[#0068FF]/20">
+      <img src="zalo.png" alt="Zalo" class="w-full h-full object-cover rounded-full" />
+    </a>
+    <div class="pulse-ring border-[#0068FF]/50"></div>
+    <span class="absolute right-[66px] top-1/2 -translate-y-1/2 whitespace-nowrap bg-slate-900 text-white text-xs font-medium px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition pointer-events-none shadow-xl border border-white/10">
+      Chat Zalo ngay
+    </span>
+  </div>
+
+  <!-- Hotline Floating Button -->
+  <div class="relative group">
+    <a href="tel:0987654321" aria-label="Gọi Hotline Luật sư"
+       class="float-btn bg-burgundy text-white border border-gold/40 shadow-lg shadow-burgundy/30">
+      <i class="fa-solid fa-phone-volume text-base transition-transform duration-200 group-hover:scale-110"></i>
+    </a>
+    <div class="pulse-ring border-burgundy/50"></div>
+    <span class="absolute right-[62px] top-1/2 -translate-y-1/2 whitespace-nowrap bg-slate-900 text-white text-xs font-medium px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition pointer-events-none shadow-xl border border-white/10">
+      Hotline: 0987 654 321
+    </span>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     10. JAVASCRIPT XỬ LÝ GIAO DIỆN
+═══════════════════════════════════════════════════════════════ -->
+<script>
+  /* ── Navbar Scroll Effect ── */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  /* ── Mobile Menu Toggle ── */
+  const menuBtn    = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon   = document.getElementById('menu-icon');
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuIcon.className = isOpen ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+  });
+
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    menuIcon.className = 'fa-solid fa-bars text-xl';
+  }
+
+  /* ── Scroll Reveal (Intersection Observer) ── */
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealElements.forEach(el => observer.observe(el));
+
+  /* ── Lead Form Submit Handler ── */
+  function handleLeadSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('home-lead-form');
+    const toast = document.getElementById('home-lead-success');
+    form.reset();
+    toast.classList.remove('hidden');
+    toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    setTimeout(() => toast.classList.add('hidden'), 7000);
+  }
+
+  /* ── 3D Parallax Tilt for Hero Section ── */
+  (function initHero3DTilt() {
+    const hero = document.getElementById('hero');
+    const bgLayer = document.getElementById('hero-3d-bg');
+    const content = document.getElementById('hero-3d-content');
+    if (!hero || !bgLayer || !content) return;
+
+    let targetRotX = 0;
+    let targetRotY = 0;
+    let targetBgX = 0;
+    let targetBgY = 0;
+
+    let currRotX = 0;
+    let currRotY = 0;
+    let currBgX = 0;
+    let currBgY = 0;
+
+    let isHovered = false;
+    let animFrame = null;
+
+    function onMouseMove(e) {
+      const rect = hero.getBoundingClientRect();
+      const nx = (e.clientX - rect.left) / rect.width - 0.5;
+      const ny = (e.clientY - rect.top) / rect.height - 0.5;
+
+      // Perspective tilt range between -3deg to 3deg
+      targetRotX = -ny * 6;
+      targetRotY = nx * 6;
+
+      // Subtle parallax translation
+      targetBgX = -nx * 26;
+      targetBgY = -ny * 26;
+
+      if (!isHovered) {
+        isHovered = true;
+        startLoop();
+      }
+    }
+
+    function onMouseLeave() {
+      targetRotX = 0;
+      targetRotY = 0;
+      targetBgX = 0;
+      targetBgY = 0;
+    }
+
+    function update() {
+      currRotX += (targetRotX - currRotX) * 0.08;
+      currRotY += (targetRotY - currRotY) * 0.08;
+      currBgX += (targetBgX - currBgX) * 0.08;
+      currBgY += (targetBgY - currBgY) * 0.08;
+
+      content.style.transform = `perspective(1000px) rotateX(${currRotX.toFixed(2)}deg) rotateY(${currRotY.toFixed(2)}deg)`;
+      bgLayer.style.transform = `scale(1.06) translate3d(${currBgX.toFixed(2)}px, ${currBgY.toFixed(2)}px, 0)`;
+
+      if (!isHovered && Math.abs(currRotX) < 0.01 && Math.abs(currRotY) < 0.01 && Math.abs(currBgX) < 0.05) {
+        content.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+        bgLayer.style.transform = 'scale(1.05) translate3d(0px, 0px, 0)';
+        animFrame = null;
+        return;
+      }
+
+      animFrame = requestAnimationFrame(update);
+    }
+
+    function startLoop() {
+      if (!animFrame) {
+        animFrame = requestAnimationFrame(update);
+      }
+    }
+
+    hero.addEventListener('mousemove', onMouseMove, { passive: true });
+    hero.addEventListener('mouseleave', () => {
+      isHovered = false;
+      onMouseLeave();
+    });
+  })();
+</script>
+
+</body>
+</html>
